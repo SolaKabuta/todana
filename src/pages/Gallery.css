@@ -1,0 +1,40 @@
+.perspective-container {
+    perspective: 1000px;
+}
+
+@keyframes rotateIn3D {
+    0% {
+        opacity: 0;
+        transform: rotateX(90deg);
+        transform-origin: bottom;
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+        transform-origin: bottom;
+    }
+}
+
+.reveal-3d {
+    opacity: 0;
+    transform-origin: bottom;
+    animation: rotateIn3D 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.title-animated {
+    display: inline-block;
+}
+
+.char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(28px) scale(0.98) rotateX(50deg);
+    animation: char-in 0.7s cubic-bezier(0.23, 1.04, 0.71, 1.02) forwards;
+}
+
+@keyframes char-in {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
