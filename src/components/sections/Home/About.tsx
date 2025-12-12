@@ -39,6 +39,7 @@ export default function About() {
   
   return (
     <main ref={containerRef} className="relative w-screen min-h-screen grid place-content-center">
+      {/* -- Background Image -- */}
       <div className="w-screen min-h-screen">
         <img
           className="object-cover w-full h-full"
@@ -47,7 +48,7 @@ export default function About() {
         />
       </div>
       {/* -- Description Card -- */}
-      <div className="appear absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-accent text-primary text-center rounded-lg p-10">
+      <div className="appear w-80 md:w-[600px] lg:w-[900px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-accent text-primary text-center rounded-lg p-10">
         <div className="flex flex-col md:flex-row justify-center md:gap-3 items-center">
           <img className="rotation size-6" src="/assets/icons/wheel.svg" alt="" width={30} height={30}/>
         <h1 className="text-3xl md:text-5xl font-medium py-10">Our story<span className="text-xs align-top">(02)</span></h1>

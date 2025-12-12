@@ -44,10 +44,16 @@ export default function About() {
         <img className="rotation" src="/assets/icons/wheel.svg" alt="" width={30} height={30}/>
         <h1 className="text-5xl">Our team<span className="text-xs align-top">(03)</span></h1>
       </div>
-      <p className="text-center text-primary pb-10">The minds behind your dream spaces</p>
+      <div className="text-center">
+      <p>The team crafting your experience.</p>
+      <p>We combine creativity and technical expertise to bring your vision to life.</p>
+      </div>
       <div className="scale-90">
       <TeamCard />
       </div>
+      {/*<p className="text-center">
+        We’re a lean, fast-moving team committed to shipping beautiful digital products. We experiment, iterate, learn fast, and stay obsessed with delivering value. Every member brings a unique perspective, and together, we build work we’re proud of.
+      </p>*/}
       </section>
     </main>
   );

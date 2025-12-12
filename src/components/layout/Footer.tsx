@@ -38,7 +38,7 @@ export default function Footer() {
         />
       </section>
       {/* -- Menu container -- */}
-      <section className="show grid md:grid-cols-4 gap-3">
+      <section className="show grid lg:grid-cols-4 gap-3">
         <div className="border border-spacing-4 mt-3 p-10">
           <p className="py-3 uppercase">Menu :</p>
           {menuItems.map((item, index) => (
@@ -50,7 +50,7 @@ export default function Footer() {
           ))}
         </div>
         {/* -- Contact container -- */}
-        <div className="border border-spacing-4 mt-3 p-10">
+        <div className="border border-spacing-4  mt-3 p-10">
           <p className="py-3 uppercase">Contact :</p>
           {contactMenuItems.map((item, index) => (
             <ul key={index}>
@@ -61,23 +61,23 @@ export default function Footer() {
           ))}
         </div>
         {/* -- Newsletter input container -- */}
-        <div className="col-span-2 border border-spacing-4 md:mt-3 p-10">
+        <div className="md:col-span-2 border border-spacing-4 md:mt-3 p-10">
           <p className="py-3 uppercase">Subscribe :</p>
           <p className="pb-3">
             Join our newsletter to stay up to date on features and realeases
           </p>
-          <div className="flex flex-col lg:flex-row items-center">
+          <div className="relative flex flex-col lg:flex-row items-center">
             <input
-              className="bg-amber-200 lg:rounded-l-md w-full h-15 px-5 placeholder-primary"
+              className="bg-amber-200 lg:rounded-md w-full h-15 px-5 placeholder-primary"
               type="text"
               placeholder="Enter your email"
             />
-            <Button className="w-full lg:w-fit h-15 rounded-r-md">Subscribe</Button>
+            <Button className="lg:absolute right-0 w-full lg:w-fit h-15 rounded-r-md">Subscribe</Button>
           </div>
         </div>
       </section>
       {/* -- Socials -- */}
-      <section className="show flex flex-col md:flex-row md:justify-around gap-3 pt-3">
+      <section className="show flex flex-col lg:flex-row md:justify-around gap-3 pt-3">
         {socialMenuItems.map((item, index) => (
           <ul className="w-full" key={index}>
             <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary hover:translate-x-2 group">
@@ -106,7 +106,7 @@ export default function Footer() {
            <li><a href="/">Terms of Services</a></li>
          </ul> 
         </div>
-        <p className="lg:text-right">Design and developed by <span className="text-blue-700"><a href="https://solakabuta.com">Sola Kabuta</a></span></p>
+        <p className="lg:text-right">Design and developed by <span className="text-primary"><a href="https://solakabuta.com">Sola Kabuta</a></span></p>
       </section>
     </footer>
   );

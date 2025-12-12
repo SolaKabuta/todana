@@ -12,7 +12,7 @@ export const teamMembers = [
     role: "CEO",
     icon: "/assets/icons/wheel_white.svg",
     photo: "/assets/images/team/Kim.jpg",
-    bio: "Founder of the Todana brand, Kim leads the company with a vision rooted in Japanese aesthetics and modern craftsmanship. She guides the studio’s global strategy, ensuring every collection reflects the values of purity, longevity, and thoughtful design. Under her leadership, Todana has grown into a benchmark for contemporary furniture that balances sculptural elegance with everyday function."
+    bio: "Daughter of the late Hideo Todana founder of the Todana brand, Kim leads the company with a vision rooted in Japanese aesthetics and modern craftsmanship. She guides the studio’s global strategy, ensuring every collection reflects the values of purity, longevity, and thoughtful design. Under her leadership, Todana has grown into a benchmark for contemporary furniture that balances sculptural elegance with everyday function."
   },
   {
     name: "Cassie Williams",
@@ -44,11 +44,11 @@ export const teamMembers = [
   },
   
   {
-    name: "Julian Hart",
+    name: "Julian Fumbwa",
     role: "Operations & Production Manager",
     icon: "/assets/icons/wheel_white.svg",
     photo: "/assets/images/team/Julian.jpg",
-    bio: "Julian coordinates artisans, workshops, and production partners to ensure flawless execution across every collection. His meticulous approach guarantees that each piece reflects Todana’s commitment to precision, durability, and exceptional craftsmanship."
+    bio: "Julian coordinates artisans, workshops, and production partners to ensure flawless execution across every collection. His meticulous approach guarantees that each piece reflects Todana’s commitment to precision, durability, and exceptional craftsmanship. And yeah he can also speak Swahili AND French."
   },
   
   {
