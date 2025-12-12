@@ -29,7 +29,11 @@ export default function Footer() {
           </p>
           {/*<p className="pb-5">Since 1834</p>*/}
         </div>
-        <img className="size-10 lg:size-fit" src="/assets/logo/logo_white.svg" alt="Todana design logo" />
+        <img
+          className="size-10 lg:size-fit"
+          src="/assets/logo/logo_white.svg"
+          alt="Todana design logo"
+        />
       </section>
       {/* -- Menu container -- */}
       <section className="grid md:grid-cols-2 gap-3">
@@ -58,6 +62,16 @@ export default function Footer() {
             <Button className="h-15 rounded-r-md">Subscribe</Button>
           </div>
         </div>
+      </section>
+      <section className="grid md:grid-cols-3 items-center py-3">
+        <p>2025 Todana. All right reserved.</p>
+        <div>
+         <ul className="flex md:justify-center gap-3 [&_li]:underline">
+           <li><a href="/">Privacy Policy</a></li>
+           <li><a href="/">Terms of Services</a></li>
+         </ul> 
+        </div>
+        <p className="md:text-right">Design and develope by <span className="text-blue-700"><a href="https://solakabuta.com">Sola Kabuta</a></span></p>
       </section>
     </footer>
   );
