@@ -66,11 +66,22 @@ export default function Footer() {
         </div>
       </section>
       {/* -- Socials -- */}
-      <section className="show flex justify-around gap-3 pt-3 group">
+      <section className="show flex justify-around gap-3 pt-3">
         {socialMenuItems.map((item, index) => (
           <ul className="w-full" key={index}>
-            <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary hover:translate-x-2">
+            <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary hover:translate-x-2 group">
+              <div className="flex">
               <a  href={item.path}>{item.label}</a>
+              <svg className="transition duration-500 group-hover:rotate-45 group-hover:translate-x-2" width={24} height={24} viewBox="0 0 24 24" fill="none">
+                  <path
+                      d="M7 17L17 7M17 7H7M17 7V17"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                  />
+              </svg>
+              </div>
             </li>
           </ul>
         ))}
