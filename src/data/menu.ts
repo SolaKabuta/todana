@@ -11,6 +11,12 @@ export const menuItems: MenuItem[] = [
   { label: "Contact", path: "/contact", image: "/assets/images/navbar/contact.jpg" },
 ]
 
+export const contactMenuItems: MenuItem[] = [
+  { label: "Email : contact.todana.design@gmail.com", path: "mailto:todana@gmail.com", image: "/assets/images/navbar/email.jpg" },
+  { label: "Phone (Japan): +81 3-4520-8894", path: "tel:+1234567890", image: "/assets/images/navbar/phone.jpg" },
+  { label: "Address: 2-11-3 Shibuya, Shibuya-ku, Tokyo 150-0002, Japan", path: "https://maps.app.goo.gl/vnWQNCuQDu1oa8idA", image: "/assets/images/navbar/location.jpg" },
+]
+
 
 export const socialMenuItems: MenuItem[] = [
   { label: "Instagram", path: "https://www.instagram.com/todana.design/", image: "/assets/images/navbar/instagram.jpg" },

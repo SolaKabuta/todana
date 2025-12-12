@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 import { useRef } from "react";
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react";
-import { menuItems, socialMenuItems } from "@/data/menu";
+import { menuItems, contactMenuItems, socialMenuItems } from "@/data/menu";
 
 export default function Footer() {
   // const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -38,7 +38,7 @@ export default function Footer() {
         />
       </section>
       {/* -- Menu container -- */}
-      <section className="show grid md:grid-cols-2 gap-3">
+      <section className="show grid md:grid-cols-4 gap-3">
         <div className="border border-spacing-4 mt-3 p-10">
           <p className="py-3 uppercase">Menu :</p>
           {menuItems.map((item, index) => (
@@ -49,8 +49,19 @@ export default function Footer() {
             </ul>
           ))}
         </div>
+        {/* -- Contact container -- */}
+        <div className="border border-spacing-4 mt-3 p-10">
+          <p className="py-3 uppercase">Contact :</p>
+          {contactMenuItems.map((item, index) => (
+            <ul key={index}>
+              <li className="w-fit transition duration-300 hover:text-primary">
+                <a href={item.path} target="_blank">{item.label}</a>
+              </li>
+            </ul>
+          ))}
+        </div>
         {/* -- Newsletter input container -- */}
-        <div className="border border-spacing-4 md:mt-3 p-10">
+        <div className="col-span-2 border border-spacing-4 md:mt-3 p-10">
           <p className="py-3 uppercase">Subscribe :</p>
           <p className="pb-3">
             Join our newsletter to stay up to date on features and realeases
@@ -66,7 +77,7 @@ export default function Footer() {
         </div>
       </section>
       {/* -- Socials -- */}
-      <section className="show flex justify-around gap-3 pt-3">
+      <section className="show flex flex-col md:flex-row md:justify-around gap-3 pt-3">
         {socialMenuItems.map((item, index) => (
           <ul className="w-full" key={index}>
             <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary hover:translate-x-2 group">
