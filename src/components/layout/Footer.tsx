@@ -1,7 +1,7 @@
 import { Button } from "../ui/button";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { menuItems } from "@/data/menu";
+import { menuItems, socialMenuItems } from "@/data/menu";
 
 export default function Footer() {
   // const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -24,7 +24,7 @@ export default function Footer() {
     >
       <section className="flex gap-3 items-center justify-center border border-spacing-4 p-10">
         <div className="text-center">
-          <p className="text-3xl md:text-5xl xl:text-mega uppercase font-black">
+          <p className="text-3xl md:text-5xl 2xl:text-mega uppercase font-black">
             戸棚 Todana
           </p>
           {/*<p className="pb-5">Since 1834</p>*/}
@@ -53,25 +53,36 @@ export default function Footer() {
           <p className="pb-3">
             Join our newsletter to stay up to date on features and realeases
           </p>
-          <div className="flex items-center">
+          <div className="flex flex-col lg:flex-row items-center">
             <input
-              className="bg-amber-200 rounded-l-md w-full h-15 px-5 placeholder-primary"
+              className="bg-amber-200 lg:rounded-l-md w-full h-15 px-5 placeholder-primary"
               type="text"
               placeholder="Enter your email"
             />
-            <Button className="h-15 rounded-r-md">Subscribe</Button>
+            <Button className="w-full lg:w-fit h-15 rounded-r-md">Subscribe</Button>
           </div>
         </div>
       </section>
-      <section className="grid md:grid-cols-3 items-center py-3">
+      {/* -- Socials -- */}
+      <section className="flex justify-around gap-3 pt-3 group">
+        {socialMenuItems.map((item, index) => (
+          <ul className="w-full" key={index}>
+            <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary">
+              <a  href={item.path}>{item.label}</a>
+            </li>
+          </ul>
+        ))}
+      </section>
+      {/* -- Legal Mentions -- */}
+      <section className="grid lg:grid-cols-3 items-center py-3">
         <p>2025 Todana. All right reserved.</p>
         <div>
-         <ul className="flex md:justify-center gap-3 [&_li]:underline">
+         <ul className="flex lg:justify-center gap-3 [&_li]:underline">
            <li><a href="/">Privacy Policy</a></li>
            <li><a href="/">Terms of Services</a></li>
          </ul> 
         </div>
-        <p className="md:text-right">Design and develope by <span className="text-blue-700"><a href="https://solakabuta.com">Sola Kabuta</a></span></p>
+        <p className="lg:text-right">Design and developed by <span className="text-blue-700"><a href="https://solakabuta.com">Sola Kabuta</a></span></p>
       </section>
     </footer>
   );
