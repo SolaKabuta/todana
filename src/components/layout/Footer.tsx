@@ -1,5 +1,6 @@
 import { Button } from "../ui/button";
 import { useRef } from "react";
+import gsap from "gsap"
 import { useGSAP } from "@gsap/react";
 import { menuItems, socialMenuItems } from "@/data/menu";
 
@@ -8,21 +9,22 @@ export default function Footer() {
 
   const footerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      // gsap.from ("#navbar-overlay", {
-      //   y: 100,
-      // })
-    },
-    { scope: footerRef },
-  );
+  useGSAP(() => {
+    gsap.from(".show", {
+      x: 150,
+      duration: 1,
+      stagger: 0.2,
+      ease: "back.out(1.7)",
+    });
+    
+  }, {});
 
   return (
     <footer
       ref={footerRef}
       className="relative w-screen bg-secondary text-white p-10"
     >
-      <section className="flex gap-3 items-center justify-center border border-spacing-4 p-10">
+      <section className="show flex gap-3 items-center justify-center border border-spacing-4 p-10">
         <div className="text-center">
           <p className="text-3xl md:text-5xl 2xl:text-mega uppercase font-black">
             戸棚 Todana
@@ -36,12 +38,12 @@ export default function Footer() {
         />
       </section>
       {/* -- Menu container -- */}
-      <section className="grid md:grid-cols-2 gap-3">
+      <section className="show grid md:grid-cols-2 gap-3">
         <div className="border border-spacing-4 mt-3 p-10">
           <p className="py-3 uppercase">Menu :</p>
           {menuItems.map((item, index) => (
             <ul key={index}>
-              <li className=" transition duration-300 hover:text-primary">
+              <li className="w-fit transition duration-300 hover:text-primary">
                 <a href={item.path}>{item.label}</a>
               </li>
             </ul>
@@ -64,17 +66,17 @@ export default function Footer() {
         </div>
       </section>
       {/* -- Socials -- */}
-      <section className="flex justify-around gap-3 pt-3 group">
+      <section className="show flex justify-around gap-3 pt-3 group">
         {socialMenuItems.map((item, index) => (
           <ul className="w-full" key={index}>
-            <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary">
+            <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary hover:translate-x-2">
               <a  href={item.path}>{item.label}</a>
             </li>
           </ul>
         ))}
       </section>
       {/* -- Legal Mentions -- */}
-      <section className="grid lg:grid-cols-3 items-center py-3">
+      <section className="show grid lg:grid-cols-3 items-center py-3">
         <p>2025 Todana. All right reserved.</p>
         <div>
          <ul className="flex lg:justify-center gap-3 [&_li]:underline">
