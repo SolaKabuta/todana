@@ -1,3 +1,4 @@
+
 export interface TeamMember {
   name: string;
   role: string;
@@ -7,28 +8,27 @@ export interface TeamMember {
 
 export const teamMembers = [
   {
-    name: "Mykyta Orban",
-    role: "Full Stack Developer",
-    photo: "/assets/images/team/myky.png",
-    bio: "Mykyta has over 10 years of experience in web development , specializing in modern and sustainable UI components."
+    name: "Cassie Williams",
+    role: "Creative Director & Furniture Designer",
+    photo: "/assets/images/team/Cassie.jpg",
+    bio: "Mykyta leads the artistic vision of Todana. With a background in industrial design, he shapes pieces that blend sculptural form, functionality, and architectural purity."
   },
   {
-    name: "Sola Kabuta",
-    role: "Front-End Developer & Web Designer",
-    photo: "/assets/images/team/sola.png",
-    photo_hover: "/assets/images/team/sam.png",
-    bio: "Sola is a skilled craftsman with a passion for creating high-quality wooden furniture."
+    name: "Sung Yeon",
+    role: "Product Designer & Visual Artist",
+    photo: "/assets/images/team/Sung.jpg",
+    bio: "Sola explores the intersection between contemporary design and Japanese minimalism. His work focuses on clean lines, refined materials, and intuitive user experience."
   },
   {
-    name: "Sam Darry",
-    role: "Full Stack Developer",
-    photo: "/assets/images/team/sam.png",
-    bio: "Catherine brings a keen eye for aesthetics and functionality to every project she undertakes."
+    name: "Shauna Johnson",
+    role: "Architect & Spatial Designer",
+    photo: "/assets/images/team/Shauna.jpg",
+    bio: "Sam designs harmonious interior environments that highlight the character of each Todana piece. He ensures every space feels balanced, intentional, and timeless."
   },
   {
-    name: "Reda Kim",
-    role: "Expert Wanta Chocolate",
-    photo: "/assets/images/team/reda.png",
-    bio: "Reda ensures that all projects are completed on time and within budget, coordinating between clients and the design team."
+    name: "Prince Khaled",
+    role: "Photographer & Visual Storyteller",
+    photo: "/assets/images/team/Prince.jpg",
+    bio: "Reda captures the soul of the collection through light, texture, and composition. His photography elevates each object into a narrative of craft, form, and atmosphere."
   }
 ];
