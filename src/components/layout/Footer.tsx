@@ -68,7 +68,7 @@ export default function Footer() {
           </p>
           <div className="relative flex flex-col lg:flex-row items-center">
             <input
-              className="bg-amber-200 text-primary text-primarylg:rounded-md w-full h-15 px-5 placeholder-primary"
+              className="bg-amber-200 text-primary lg:rounded-md w-full h-15 px-5 placeholder-primary"
               type="text"
               placeholder="Enter your email"
             />
