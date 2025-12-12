@@ -1,7 +1,7 @@
 
 # Furniture Project — Vite + React + TypeScript + Tailwind + GSAP + shadcn/ui (Bun)
 
-A collaborative class project to create a modern furniture site with smooth animations and a consistent UI system. This README outlines the stack, structure, setup, workflow, and team best practices—and this repository is my personal version of that project.
+**A collaborative class project** to create a modern furniture website with smooth animations and a consistent UI system. This README outlines the stack, structure, setup, and workflow. This repository is **my personal version of that project**.
 
 ## Tech Stack
 
@@ -19,7 +19,7 @@ A collaborative class project to create a modern furniture site with smooth anim
 
 Bun command: :
 
-- bun run dev         # Vite dev server
+- bun run dev     # Vite dev server
 - bun run build   # Production build
 - bun run preview # Preview dist locally
 - bun run lint    # ESLint (if configured)
