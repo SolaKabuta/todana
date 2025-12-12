@@ -32,7 +32,7 @@ export default function Footer() {
           {/*<p className="pb-5">Since 1834</p>*/}
         </div>
         <img
-          className="size-10 lg:size-fit"
+          className="size-10 2xl:size-fit"
           src="/assets/logo/logo_white.svg"
           alt="Todana design logo"
         />
@@ -68,7 +68,7 @@ export default function Footer() {
           </p>
           <div className="relative flex flex-col lg:flex-row items-center">
             <input
-              className="bg-amber-200 lg:rounded-md w-full h-15 px-5 placeholder-primary"
+              className="bg-amber-200 text-primary text-primarylg:rounded-md w-full h-15 px-5 placeholder-primary"
               type="text"
               placeholder="Enter your email"
             />
@@ -82,7 +82,7 @@ export default function Footer() {
           <ul className="w-full" key={index}>
             <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary hover:translate-x-2 group">
               <div className="flex">
-              <a  href={item.path}>{item.label}</a>
+              <a className="transition duration-300 group-hover:-translate-x-4" href={item.path}>{item.label}</a>
               <svg className="transition duration-500 group-hover:rotate-45 group-hover:translate-x-2" width={24} height={24} viewBox="0 0 24 24" fill="none">
                   <path
                       d="M7 17L17 7M17 7H7M17 7V17"

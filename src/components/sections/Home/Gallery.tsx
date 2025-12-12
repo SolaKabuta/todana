@@ -75,7 +75,7 @@ export default function Gallery() {
             selected to age beautifully and live with you.
           </p>
         <div className="w-fit h-fit py-20">
-          <img className="object-cover w-full h-fit" src="/assets/images/home/table.png" alt="gallery cover image" />
+          <img className="object-cover w-full h-fit" src="/assets/images/gallery/swipe.jpg" alt="gallery cover image" />
         </div>
         {/*<Carousel>
           <CarouselContent>

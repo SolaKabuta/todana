@@ -26,10 +26,10 @@ export default function TeamCard() {
   return (
     <main className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 text-white">
       {teamMembers.map((item) => (
-        <div className="bg-primary p-5 rounded-lg">
-          <div className="w-fit h-fit rounded-lg">
+        <div className="bg-primary p-5 rounded-lg group">
+          <div className="w-fit h-fit rounded-lg ">
             <img
-              className="object-cover rounded-lg pb-5 grayscale transition duration-500 hover:scale-95 hover:grayscale-0"
+              className="object-cover rounded-lg pb-5 grayscale transition-all duration-500 group-hover:p-1 hover:grayscale-0"
               src={item.photo}
               alt=""
             />
