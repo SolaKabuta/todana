@@ -24,7 +24,7 @@ export default function TeamCard() {
   );
 
   return (
-    <main className="grid md:grid-cols-4 gap-5 text-white">
+    <main className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 text-white">
       {teamMembers.map((item) => (
         <div className="bg-primary p-5 rounded-lg">
           <div className="w-fit h-fit rounded-lg">
