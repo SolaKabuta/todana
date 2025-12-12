@@ -46,7 +46,7 @@ export default function Gallery() {
   return (
     <main
       ref={galleryRef}
-      className="w-screen min-h-screen md:grid md:grid-cols-2 gap-10 place-content-center items-center px-10 pb-10 md:pb-0"
+      className="w-screen min-h-screen md:grid md:grid-cols-2 gap-10 place-content-center text-white items-center px-10 pb-10 md:pb-0"
     >
       <div className="appear z-50">
         <div className="flex gap-3 items-center">
