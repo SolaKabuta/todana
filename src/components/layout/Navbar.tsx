@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { menuItems } from "@/data/menu";
+import { menuItems, socialMenuItems } from "@/data/menu";
 // import { menuItems } from "@/data/menu";
 
 export default function Navbar() {
@@ -100,12 +100,19 @@ export default function Navbar() {
           id="navbar-overlay"
           className="invisible fixed z-70 top-20 left-1/2 -translate-x-1/2 bg-white rounded-xl h-[80vh] w-full lg:w-[500px] -translate-y-full opacity-0 shadow-2xl flex items-center justify-center"
         >
-          <div>
+          <div className="grid place-items-center">
           {menuItems.map((item) => (
-            <ul className="text-5xl pb-3 w-full">
-              <li><a className="w-full transition duration-300 hover:text-secondary" href={item.path}>{item.label}<span className="ml-3 text-xs float-end">{item.id}</span></a></li>
+            <ul className="text-5xl pb-3 w-full p-10">
+              <li><a className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
             </ul>
           ))}
+          <div className="pt-20">
+          {socialMenuItems.map((item) => (
+            <ul>
+              <li><a className="w-full transition duration-300 hover:text-secondary" href={item.path}>{item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
+            </ul>
+          ))}
+          </div>
           </div>
         </div>
       </section>

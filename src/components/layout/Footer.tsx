@@ -16,7 +16,7 @@ export default function Footer() {
     gsap.from(".show", {
       x: 100,
       duration: 5,
-      stagger: 1.2,
+      stagger: 1,
       ease: "back.out(1.7)",
       
       scrollTrigger: {
