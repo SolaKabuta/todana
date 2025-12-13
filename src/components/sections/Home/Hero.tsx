@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -16,12 +19,15 @@ export default function Hero() {
       ease: "back.out(1.7)",
     });
     
+    // Icon animation
+    
     gsap.to(".rotation", {
       rotation: 360,          
       duration: 6,
       repeat: -2,
     });
     
+   
   }, {});
 
   return (
