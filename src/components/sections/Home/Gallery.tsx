@@ -13,12 +13,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 
 export default function Gallery() {
   const galleryRef = useRef<HTMLDivElement>(null);
@@ -28,7 +23,7 @@ export default function Gallery() {
       y: 80,
       opacity: 0.8,
       duration: 1,
-      stagger: 0.2,
+      stagger: 0.8,
 
       scrollTrigger: {
         trigger: ".appear",
@@ -48,7 +43,7 @@ export default function Gallery() {
   return (
     <main
       ref={galleryRef}
-      className="w-screen min-h-screen md:grid md:grid-cols-2 gap-10 place-content-center text-white items-center px-10 pb-10 md:pb-0"
+      className="appear w-screen min-h-screen md:grid md:grid-cols-2 gap-10 place-content-center text-white items-center px-10 pb-10 md:pb-0"
     >
       <div className="appear z-50">
         <div className="flex gap-3 items-center">
@@ -77,45 +72,45 @@ export default function Gallery() {
           beautifully and live with you.
         </p>
         {/* -- CTA -- */}
-                  <Button
-                    variant={"secondary"}
-                    className="mt-10 w-full"
-                    aria-label="button discover the collection"
-                  >
-                    Discover our collection
-                  </Button>
+        <Button
+          variant={"secondary"}
+          className="mt-10 w-full"
+          aria-label="button discover the collection"
+        >
+          Discover our collection
+        </Button>
       </div>
-      <div className="h-fit py-20">
-      <Carousel
-        className={"hover:cursor-pointer active:cursor-grabbing"}
-        plugins={[
-          Autoplay({
-            delay: 2500,
-            stopOnInteraction: false,
-            stopOnMouseEnter: true,
-          }),
-        ]}
-      >
-        <CarouselContent>
-          {furnitures.map((item, i) => (
-            <CarouselItem
-              key={i}
-              className="cursor-grab relative md:basis-1/2 group"
-            >
-              <img
-                className="h-screen w-fill object-cover transition duration-500 group-hover:blur-xs"
-                src={item.image}
-                alt="/"
-                width={2000}
-                height={2000}
-                loading="lazy"
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+      {/* -- Caroussel Item -- */}
+      <div className="appear py-20">
+        <Carousel
+          className={"hover:cursor-pointer active:cursor-grabbing"}
+          plugins={[
+            Autoplay({
+              delay: 2500,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]}
+        >
+          <CarouselContent>
+            {furnitures.map((item, i) => (
+              <CarouselItem
+                key={i}
+                className="cursor-grab relative md:basis-1/2 group"
+              >
+                <img
+                  className="h-screen w-fill object-cover transition-all duration-500 group-hover:p-5"
+                  src={item.image}
+                  alt="/"
+                  width={2000}
+                  height={2000}
+                  loading="lazy"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
-      
     </main>
   );
 }
