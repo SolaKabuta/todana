@@ -1,8 +1,11 @@
+import { menuItems, contactMenuItems, socialMenuItems } from "@/data/menu";
 import { Button } from "../ui/button";
 import { useRef } from "react";
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react";
-import { menuItems, contactMenuItems, socialMenuItems } from "@/data/menu";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
   // const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -11,10 +14,17 @@ export default function Footer() {
 
   useGSAP(() => {
     gsap.from(".show", {
-      x: 150,
-      duration: 1,
-      stagger: 0.2,
+      x: 100,
+      duration: 5,
+      stagger: 1.2,
       ease: "back.out(1.7)",
+      
+      scrollTrigger: {
+        trigger: ".show",
+        start: "top 140%",
+        scrub: 1,
+        toggleActions: "play none none reverse"
+      }
     });
     
   }, {});
