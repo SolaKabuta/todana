@@ -82,9 +82,9 @@ export default function Footer() {
               type="text"
               placeholder="Enter your email"
             />
-            <p>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
             <Button className="lg:absolute right-0 w-full lg:w-fit h-15 rounded-r-md">Subscribe</Button>
           </div>
+          <p className="text-xs py-5 text-balance">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
         </div>
       </section>
       {/* -- Socials -- */}

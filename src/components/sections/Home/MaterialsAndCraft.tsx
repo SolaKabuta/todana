@@ -2,30 +2,109 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Button } from "@/components/ui/button";
 
 gsap.registerPlugin(ScrollTrigger);
-// interface Testimonials {
-//   propName: type;
-// }
 
 export default function MaterialsAndCraft() {
-  
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   useGSAP(() => {
-    
-    gsap.from("scroll", {
-      
-    })
-    
-  })
-  
+    gsap.from(".slide", {
+      y: 80,
+      opacity: 0.8,
+      duration: 1,
+      stagger: 0.8,
+
+      scrollTrigger: {
+        trigger: ".slide",
+        start: "top 100%",
+        scrub: 1,
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.to(".rotation", {
+      rotation: 360,
+      duration: 6,
+      repeat: -2,
+    });
+  }, {});
+
   return (
-    
-    
-    <main ref={containerRef} className="h-screen w-screen bg-primary text-white pt-5">
-      {/* -- Partners -- */}
-      <h1 className="text-5xl">Materials And Craft</h1>
+    <main
+      ref={containerRef}
+      className="h-screen w-screen grid md:grid-cols-2 gap-10 bg-primary text-white p-10"
+    >
+      {/* -- Materials section -- */}
+      <section className="slide col-start-2 md:col-start-1 row-span-full grid grid-cols-2 gap-10">
+        <div className="bg-accent rounded-2xl"></div>
+        <div className="bg-accent rounded-2xl"></div>
+        <div className="bg-accent rounded-2xl"></div>
+        <div className="bg-accent rounded-2xl"></div>
+      </section>
+
+      {/* -- Title and texts section -- */}
+      <section className="slide md:col-start-2">
+        <div className="flex gap-3 items-center">
+          <img
+            className="rotation"
+            src="/assets/icons/wheel_white.svg"
+            alt="wheel icon"
+            width={30}
+            height={30}
+          />
+          <h1 className="text-5xl py-10">
+            Materials and craft
+            <span className="text-xs align-top">(02)</span>
+          </h1>
+        </div>
+        <div>
+          <p className="py-10">
+            Honest materials. Thoughtful execution.
+          </p>
+          <p>
+            We work with a restrained palette of materials chosen for their durability, texture, and aging qualities.
+            Wood, metal, fabric — each material is selected to express its natural character while supporting long-term use.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          <p className="text-lg">
+            Designed objects, curated into timeless collections.
+          </p>
+
+          <p>
+            We select materials for integrity—woods that hold form, metals that
+            feel calm, stones that invite touch, and textiles that breathe.
+            Every piece balances structure with softness, precision with
+            character.
+          </p>
+
+          <p>
+            Guided by Japanese craftsmanship, our finish work favors honesty:
+            hand‑rubbed oils, brushed metals, and subtle edges that age
+            gracefully. The result is a coherent system—modular, expressive, and
+            built to live with you.
+          </p>
+
+          {/* -- Micro-believability line -- */}
+          <p className="text-sm opacity-75">
+            Provenance: ash and oak from FSC‑certified forests, steel and stone
+            from long‑standing workshops. Upholstery tested for abrasion and
+            colorfastness.
+          </p>
+        </div>
+        {/* -- CTAs -- */}
+        <div className="flex flex-col lg:flex-row gap-3 py-10">
+          <Button variant={"secondary"}>Explore materials</Button>
+          <Button variant={"secondary"}>See the craft process</Button>
+          <Button variant={"outline"}>Request samples</Button>
+          <Button variant={"outline"}>Read maeterial stories</Button>
+          <Button variant={"outline"}>View specs & care </Button>
+        </div>
+      </section>
+      
     </main>
   );
 }

@@ -43,9 +43,9 @@ export default function Gallery() {
   return (
     <main
       ref={galleryRef}
-      className="appear w-screen min-h-screen md:grid md:grid-cols-2 gap-10 place-content-center text-white items-center px-10 pb-10 md:pb-0"
+      className="appear w-screen min-h-screen grid md:grid-cols-2 gap-10 place-content-center text-white items-center px-10 pb-10 md:pb-0"
     >
-      <div className="appear z-50">
+      <section className="appear z-50">
         <div className="flex gap-3 items-center">
           <img
             className="rotation"
@@ -64,6 +64,10 @@ export default function Gallery() {
           tables, lamps, and storage systems — each piece designed to balance
           precision and softness, structure and emotion.
         </p>
+        <p className="pb-10">
+          Each Todana collection explores a dialogue between form, material, and space.
+          From seating to lighting, every piece is designed as part of a coherent system — modular, expressive, and built to last.
+        </p>
         <p className="">
           Shapes That Speak Our silhouettes draw from minimalism, modernism, and
           Japanese craftsmanship — reduced to the essential, so your space can
@@ -74,14 +78,14 @@ export default function Gallery() {
         {/* -- CTA -- */}
         <Button
           variant={"secondary"}
-          className="mt-10 w-full"
+          className={'mt-10 w-full {}'}
           aria-label="button discover the collection"
         >
           Discover our collection
         </Button>
-      </div>
-      {/* -- Caroussel Item -- */}
-      <div className="appear py-20">
+      </section>
+      {/* -- Caroussel Item Sectoin -- */}
+      <section className="appear py-20">
         <Carousel
           className={"hover:cursor-pointer active:cursor-grabbing"}
           plugins={[
@@ -110,7 +114,7 @@ export default function Gallery() {
             ))}
           </CarouselContent>
         </Carousel>
-      </div>
+      </section>
     </main>
   );
 }
