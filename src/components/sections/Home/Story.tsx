@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function Story() {
   
   const containerRef = useRef<HTMLDivElement>(null);
  

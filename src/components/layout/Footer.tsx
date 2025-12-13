@@ -14,14 +14,14 @@ export default function Footer() {
 
   useGSAP(() => {
     gsap.from(".show", {
-      x: 100,
-      duration: 5,
+      y: 100,
+      duration: 4,
       stagger: 1,
       ease: "back.out(1.7)",
       
       scrollTrigger: {
         trigger: ".show",
-        start: "top 140%",
+        start: "top 100%",
         scrub: 1,
         toggleActions: "play none none reverse"
       }
