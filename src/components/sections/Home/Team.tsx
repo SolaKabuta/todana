@@ -73,7 +73,6 @@ export default function About() {
           <TeamCard />
         </div>
       </section>
-      ee
       {/* -- Desktop Version End -- */}
       
       {/* -- Mobile Version Start -- */}

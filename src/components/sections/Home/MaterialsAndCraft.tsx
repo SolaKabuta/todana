@@ -12,7 +12,6 @@ export default function MaterialsAndCraft() {
   useGSAP(() => {
     gsap.from(".slide", {
       y: 80,
-      opacity: 0.8,
       duration: 1,
       stagger: 0.8,
 
@@ -69,7 +68,7 @@ export default function MaterialsAndCraft() {
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="slide space-y-6">
           <p className="text-lg">
             Designed objects, curated into timeless collections.
           </p>
@@ -96,7 +95,7 @@ export default function MaterialsAndCraft() {
           </p>
         </div>
         {/* -- CTAs -- */}
-        <div className="flex flex-col lg:flex-row gap-3 py-10">
+        <div className="slide flex flex-col lg:flex-row gap-3 py-10">
           <Button variant={"secondary"}>Explore materials</Button>
           <Button variant={"secondary"}>See the craft process</Button>
           <Button variant={"outline"}>Request samples</Button>

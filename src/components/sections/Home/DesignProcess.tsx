@@ -17,14 +17,13 @@ export default function DesignProcess() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.from(".slide", {
+    gsap.from(".slide-up", {
       y: 80,
-      opacity: 0.8,
       duration: 1,
       stagger: 0.8,
 
       scrollTrigger: {
-        trigger: ".slide",
+        trigger: ".slide-up",
         start: "top 100%",
         scrub: 1,
         toggleActions: "play none none reverse",
@@ -39,7 +38,7 @@ export default function DesignProcess() {
       ref={containerRef}
       className="h-screen w-screen text-white p-10"
     >
-      <div className="flex gap-3 items-center">
+      <div className="slide-up flex gap-3 items-center">
         <img
           className="rotation"
           src="/assets/icons/wheel_white.svg"
@@ -53,7 +52,7 @@ export default function DesignProcess() {
         </h1>
       </div>
       {/* -- Process Accordion Section  -- */}
-      <section className="appear text-balance [&_p]:pb-10">
+      <section className="slide-up text-balance [&_p]:pb-10">
               <div>
                 <Accordion
                   type="single"
@@ -159,7 +158,7 @@ export default function DesignProcess() {
                 {/* -- CTA -- */}
                 <Button
                   variant={"secondary"}
-                  className="mt-10 w-full"
+                  className="slide-up mt-10 w-full"
                   aria-label="button discover the collection"
                 >
                   Discover our collection
