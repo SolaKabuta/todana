@@ -21,8 +21,7 @@ export const contactMenuItems: MenuItem[] = [
 
 
 export const socialMenuItems: MenuItem[] = [
-  { label: "Instagram", id:"", path: "https://www.instagram.com/todana.design/", image: "/assets/images/navbar/instagram.jpg" },
-  { label: "Pinterest", id:"", path: "https://www.pinterest.com/todanadesign/_saved/", image: "/assets/images/navbar/pinterest.jpg" },
-  { label: "LinkedIn", id:"", path: "https://www.linkedin.com/company/todana-design/about/", image: "/assets/images/navbar/linkedin.jpg" },
-  { label: "Twitter(X)",id:"",  path: "", image: ""}
+  { label: "Behance", id:"", path: "https://www.behance.com/solakabuta/", image: "/assets/images/navbar/instagram.jpg" },
+  { label: "Twitter(X)",id:"",  path: "", image: ""},
+  { label: "LinkedIn", id:"", path: "https://www.linkedin.com/in/sola-kabuta/", image: "/assets/images/navbar/linkedin.jpg" },
 ]

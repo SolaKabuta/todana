@@ -36,7 +36,7 @@ export default function DesignProcess() {
   return (
     <main
       ref={containerRef}
-      className="h-screen w-screen grid text-white p-10 py-20"
+      className="min-h-screen w-screen grid text-white p-10 py-20"
     >
       <div className="slide-up flex gap-3 items-center">
         <img

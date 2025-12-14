@@ -33,7 +33,7 @@ export default function MaterialsAndCraft() {
   return (
     <main
       ref={containerRef}
-      className="h-screen w-screen grid md:grid-cols-2 gap-10 bg-primary text-white p-10"
+      className="min-h-screen w-screen grid md:grid-cols-2 gap-10 bg-primary text-white p-10"
     >
       {/* -- Materials section -- */}
       <section className="slide col-start-2 md:col-start-1 row-span-full grid grid-cols-2 gap-10">

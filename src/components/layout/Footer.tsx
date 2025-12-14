@@ -84,7 +84,7 @@ export default function Footer() {
             />
             <Button className="lg:absolute right-0 w-full lg:w-fit h-15 rounded-r-md">Subscribe</Button>
           </div>
-          <p className="text-xs py-5 text-balance">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+          <p className="text-xs py-5 text-balance">By subscribing you agree to our Privacy Policy and provide consent to receive updates from our company.</p>
         </div>
       </section>
       {/* -- Socials -- */}

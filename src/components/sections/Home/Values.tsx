@@ -18,7 +18,7 @@ export default function Values() {
   return (
     <main
       ref={containerRef}
-      className="h-screen w-screen bg-accent text-primary pt-5 p-10"
+      className="min-h-screen w-screen bg-accent text-primary pt-5 p-10"
     >
       <div className="flex gap-3 items-center">
         <img
@@ -33,6 +33,11 @@ export default function Values() {
           <span className="text-xs align-top">(06)</span>
         </h1>
       </div>
+      <section className="slide flex flex-col gap-3 pt-10">
+       <div className="bg-primary h-80 rounded-xl w-full"></div> 
+       <div className="bg-primary h-80 rounded-xl w-full"></div> 
+       <div className="bg-primary h-80 rounded-xl w-full"></div> 
+      </section>
     </main>
   );
 }
