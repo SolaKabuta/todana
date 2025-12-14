@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
+import SplineCard from "@/components/ui/SplineCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,11 +37,10 @@ export default function MaterialsAndCraft() {
       className="min-h-screen w-screen grid md:grid-cols-2 gap-10 bg-primary text-white p-10"
     >
       {/* -- Materials section -- */}
-      <section className="slide hidden  md:col-start-1 row-span-full md:grid grid-cols-2 gap-10">
-        <div className="bg-accent rounded-2xl"></div>
-        <div className="bg-accent rounded-2xl"></div>
-        <div className="bg-accent rounded-2xl"></div>
-        <div className="bg-accent rounded-2xl"></div>
+      <section className="slide hidden  md:col-start-1 row-span-full md:block gap-10">
+        <div>
+          <SplineCard/> 
+        </div>
       </section>
 
       {/* -- Title and texts section -- */}
