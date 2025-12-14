@@ -78,7 +78,7 @@ export default function About() {
       
       {/* -- Mobile Version Start -- */}
       
-      <section className=" py-20 block md:hidden text-white">
+      <section className="py-20 block md:hidden text-white">
         <Carousel
           className={"hover:cursor-pointer active:cursor-grabbing"}
           plugins={[
@@ -95,10 +95,10 @@ export default function About() {
                 key={i}
                 className="cursor-grab relative md:basis-1/2 group"
               >
-                <div className="bg-primary p-5 rounded-lg group">
+                <div className="w-80 bg-primary p-5 rounded-lg group">
                   <div className="w-fit h-fit rounded-lg ">
                     <img
-                      className="object-cover rounded-lg pb-5 grayscale transition-all duration-500 group-hover:p-1 hover:grayscale-0"
+                      className="object-cover h-screen w-fill rounded-lg pb-5 grayscale transition-all duration-500 group-hover:p-1 hover:grayscale-0"
                       src={item.photo}
                       alt=""
                     />

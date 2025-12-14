@@ -36,7 +36,7 @@ export default function MaterialsAndCraft() {
       className="min-h-screen w-screen grid md:grid-cols-2 gap-10 bg-primary text-white p-10"
     >
       {/* -- Materials section -- */}
-      <section className="slide col-start-2 md:col-start-1 row-span-full grid grid-cols-2 gap-10">
+      <section className="slide hidden  md:col-start-1 row-span-full md:grid grid-cols-2 gap-10">
         <div className="bg-accent rounded-2xl"></div>
         <div className="bg-accent rounded-2xl"></div>
         <div className="bg-accent rounded-2xl"></div>
