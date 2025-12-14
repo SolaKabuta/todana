@@ -1,27 +1,30 @@
-import SplineScene from "@/components/SplineScenes/SplineScene";
+import GlassScene from "@/components/SplineScenes/GlassScene";
+import LiquidScene from "@/components/SplineScenes/LiquidScene";
+import TextureScene from "@/components/SplineScenes/TextureScene";
+import TitaniumScene from "@/components/SplineScenes/TitaniumScene";
 
 // interface SplineCardProps {
 //   propName: string;
 // }
 const scenes = [
   {
-    label: <SplineScene />,
-    title: "Metals",
+    label: <LiquidScene />,
+    title: "Fabric",
     text: "Collaborative project to build a modern furniture website with smooth animations and a consistent UI system. This README explains the tech stack, project structure, setup, workflow, and good practices for our team.",
   },
   {
-    label: <SplineScene />,
-    title: "Metals",
+    label: <GlassScene />,
+    title: "Glass",
     text: "Collaborative project to build a modern furniture website with smooth animations and a consistent UI system. This README explains the tech stack, project structure, setup, workflow, and good practices for our team.",
   },
   {
-    label: <SplineScene />,
-    title: "Metals",
+    label: <TextureScene />,
+    title: "Texture",
     text: "Collaborative project to build a modern furniture website with smooth animations and a consistent UI system. This README explains the tech stack, project structure, setup, workflow, and good practices for our team.",
   },
   {
-    label: <SplineScene />,
-    title: "Metals",
+    label: <TitaniumScene />,
+    title: "Metal",
     text: "Collaborative project to build a modern furniture website with smooth animations and a consistent UI system. This README explains the tech stack, project structure, setup, workflow, and good practices for our team.",
   },
 ];
@@ -29,18 +32,27 @@ const scenes = [
 export default function SplineCard() {
   return (
     <>
-      <section className="grid grid-cols-2 gap-3">
+      <section className="slide grid grid-cols-2 gap-6">
       {/* -- Spline Scene -- */}
       {scenes.map((scene, index) => (
-        <div key={index} className="relative flex flex-col gap-5 border border-white rounded-2xl p-2">
+        <div key={index} className="relative flex flex-col gap-5 border border-white rounded-2xl p-2 transition-all duration-300 hover:bg-secondary group">
           <div className=" rounded-2xl">
             <ul>
               <li>{scene.label}</li>
               {/* -- Texts -- */}
-              <div className="px-2 pb-7">
-                <p className="font-black py-5">{scene.title}</p>
+              <section className="px-2 pb-7">
+                <div className="flex gap-3 ">
+                  <img
+                    className="rotation"
+                    src="/assets/icons/wheel_white.svg"
+                    alt="wheel icon"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="font-black py-5">{scene.title}</p>
+                </div>
                 <p>{scene.text}</p>
-              </div>
+              </section>
             </ul>
           </div>
         </div>
