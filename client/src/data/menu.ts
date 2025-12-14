@@ -7,10 +7,11 @@ export interface MenuItem {
 
 export const menuItems: MenuItem[] = [
   { label: "Home", id:"(O1)", path: "/" , image: "/assets/images/navbar/pink_balloon.jpg"},
-  { label: "Gallery", id:"(O2)", path: "/gallery", image: "/assets/images/navbar/gallery.jpg" },
-  { label: "Team", id:"(O3)", path: "#team", image: "/assets/images/navbar/gallery.jpg" },
-  { label: "About", id:"(O4)", path: "/about", image: "/assets/images/navbar/team.jpg" },
-  { label: "Contact", id:"(O5)", path: "/contact", image: "/assets/images/navbar/contact.jpg" },
+  { label: "Collection", id:"(O2)", path: "/collection", image: "/assets/images/navbar/collection.jpg" },
+  { label: "Catalogue", id:"(O3)", path: "/catalogue", image: "/assets/images/navbar/catalogue.jpg" },
+  { label: "Team", id:"(O4)", path: "#team", image: "/assets/images/navbar/gallery.jpg" },
+  { label: "About", id:"(O5)", path: "/about", image: "/assets/images/navbar/team.jpg" },
+  { label: "Contact", id:"(O6)", path: "/contact", image: "/assets/images/navbar/contact.jpg" },
 ]
 
 export const contactMenuItems: MenuItem[] = [

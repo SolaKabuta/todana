@@ -117,7 +117,7 @@ export default function Footer() {
            <li><a href="/">Terms of Services</a></li>
          </ul> 
         </div>
-        <p className="lg:text-right">Design and developed by <span className="text-primary"><a href="https://solakabuta.com">Sola Kabuta</a></span></p>
+        <p className="lg:text-right">Design and developed by <span className="text-primary"><a target="_blank" href="https://solakabuta.com">Sola Kabuta</a></span></p>
       </section>
     </footer>
   );
