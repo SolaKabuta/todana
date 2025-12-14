@@ -21,7 +21,7 @@ export default function Footer() {
       
       scrollTrigger: {
         trigger: ".show",
-        start: "top 100%",
+        start: "top 120%",
         scrub: 1,
         toggleActions: "play none none reverse"
       }

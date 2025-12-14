@@ -8,8 +8,9 @@ export interface MenuItem {
 export const menuItems: MenuItem[] = [
   { label: "Home", id:"(O1)", path: "/" , image: "/assets/images/navbar/pink_balloon.jpg"},
   { label: "Gallery", id:"(O2)", path: "/gallery", image: "/assets/images/navbar/gallery.jpg" },
-  { label: "About", id:"(O3)", path: "/about", image: "/assets/images/navbar/team.jpg" },
-  { label: "Contact", id:"(O4)", path: "/contact", image: "/assets/images/navbar/contact.jpg" },
+  { label: "Team", id:"(O3)", path: "#team", image: "/assets/images/navbar/gallery.jpg" },
+  { label: "About", id:"(O4)", path: "/about", image: "/assets/images/navbar/team.jpg" },
+  { label: "Contact", id:"(O5)", path: "/contact", image: "/assets/images/navbar/contact.jpg" },
 ]
 
 export const contactMenuItems: MenuItem[] = [

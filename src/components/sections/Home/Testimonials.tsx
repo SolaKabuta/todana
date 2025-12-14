@@ -24,7 +24,19 @@ export default function Testimonials() {
     
     
     <main ref={onScrollTextRef} className="h-screen w-screen bg-primary text-white pt-5">
-      <h1 className="text-5xl">Testimonials</h1>
+      <div className="flex gap-3 items-center">
+              <img
+                className="rotation"
+                src="/assets/icons/wheel_white.svg"
+                alt="wheel icon"
+                width={30}
+                height={30}
+              />
+              <h1 className="text-5xl py-10">
+                Testimonials
+                <span className="text-xs align-top">(07)</span>
+              </h1>
+            </div>
     </main>
   );
 }

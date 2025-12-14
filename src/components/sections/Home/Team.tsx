@@ -45,6 +45,7 @@ export default function About() {
   return (
     <main
       ref={containerRef}
+      id="team"
       className="relative bg-accent w-screen min-h-screen grid place-content-center p-10 pb-40"
     >
       {/* -- Desktop Version Start -- */}
@@ -59,7 +60,7 @@ export default function About() {
             height={30}
           />
           <h1 className="text-5xl">
-            Our team<span className="text-xs align-top">(03)</span>
+            Our team<span className="text-xs align-top">(04)</span>
           </h1>
         </div>
         <div className="text-center">

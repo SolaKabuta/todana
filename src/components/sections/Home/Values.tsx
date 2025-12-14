@@ -9,23 +9,30 @@ gsap.registerPlugin(ScrollTrigger);
 // }
 
 export default function Values() {
-  
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   useGSAP(() => {
-    
-    gsap.from("scroll", {
-      
-    })
-    
-  })
-  
+    gsap.from("scroll", {});
+  });
+
   return (
-    
-    
-    <main ref={containerRef} className="h-screen w-screen bg-primary text-white pt-5">
-      {/* -- Partners -- */}
-      <h1 className="text-5xl">Sustainability and Values</h1>
+    <main
+      ref={containerRef}
+      className="h-screen w-screen bg-accent text-primary pt-5 p-10"
+    >
+      <div className="flex gap-3 items-center">
+        <img
+          className="rotation"
+          src="/assets/icons/wheel.svg"
+          alt="wheel icon"
+          width={30}
+          height={30}
+        />
+        <h1 className="text-5xl py-10">
+          Values
+          <span className="text-xs align-top">(06)</span>
+        </h1>
+      </div>
     </main>
   );
 }

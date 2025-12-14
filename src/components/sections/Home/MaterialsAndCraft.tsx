@@ -95,7 +95,7 @@ export default function MaterialsAndCraft() {
           </p>
         </div>
         {/* -- CTAs -- */}
-        <div className="slide flex flex-col lg:flex-row gap-3 py-10">
+        <div className="slide flex flex-col lg:grid lg:grid-cols-3 gap-3 py-10">
           <Button variant={"secondary"}>Explore materials</Button>
           <Button variant={"secondary"}>See the craft process</Button>
           <Button variant={"outline"}>Request samples</Button>

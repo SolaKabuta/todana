@@ -103,7 +103,7 @@ export default function Navbar() {
           <div className="grid place-items-center">
           {menuItems.map((item) => (
             <ul className="text-5xl pb-3 w-full p-10">
-              <li><a className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
+              <li><a onClick={handleToggle} className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
             </ul>
           ))}
           <div className="pt-20">

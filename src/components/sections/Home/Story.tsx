@@ -51,7 +51,7 @@ export default function Story() {
       <div className="appear w-80 md:w-[600px] lg:w-[900px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-accent text-primary text-center rounded-lg p-10">
         <div className="flex flex-col md:flex-row justify-center md:gap-3 items-center">
           <img className="rotation size-6" src="/assets/icons/wheel.svg" alt="" width={30} height={30}/>
-        <h1 className="text-3xl md:text-5xl font-medium py-10">Our story<span className="text-xs align-top">(02)</span></h1>
+        <h1 className="text-3xl md:text-5xl font-medium py-10">Our story<span className="text-xs align-top">(05)</span></h1>
         </div>
         <p className="text-xs md:text-lg text-balance">
           Born from the meaning of space. Todana takes its name from the
