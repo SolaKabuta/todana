@@ -1,9 +1,10 @@
-// src/components/layout/Navbar.tsx
+import { menuItems, socialMenuItems } from "@/data/menu";
 import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { menuItems, socialMenuItems } from "@/data/menu";
-// import { menuItems } from "@/data/menu";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -46,6 +47,20 @@ export default function Navbar() {
           },
           "<",
         ); // "<" = En même temps que le fond noir
+     
+      gsap.from(".nav-links", {
+        y: 50,
+        duration: 1,
+        stagger: 0.8,
+  
+        scrollTrigger: {
+          trigger: ".nav-links",
+          start: "top 100%",
+          scrub: 1,
+          toggleActions: "play none none reverse",
+        },
+      }); 
+      
     },
     { scope: containerRef },
   ); // Scope vital !pe vital !
@@ -100,12 +115,14 @@ export default function Navbar() {
           id="navbar-overlay"
           className="invisible fixed z-70 top-20 left-1/2 -translate-x-1/2 bg-white rounded-xl h-[80vh] w-full lg:w-[500px] -translate-y-full opacity-0 shadow-2xl flex items-center justify-center"
         >
+          {/* -- Nav Links -- */}
           <div className="grid place-items-center">
           {menuItems.map((item) => (
             <ul className="text-5xl pb-3 w-full">
               <li><a onClick={handleToggle} className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
             </ul>
           ))}
+          {/* -- Social Links -- */}
           <div className="pt-20">
           {socialMenuItems.map((item) => (
             <ul>
