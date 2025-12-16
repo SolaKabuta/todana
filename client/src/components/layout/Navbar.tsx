@@ -116,7 +116,7 @@ export default function Navbar() {
           className="invisible fixed z-70 top-20 left-1/2 -translate-x-1/2 bg-white rounded-xl h-[80vh] w-full lg:w-[500px] -translate-y-full opacity-0 shadow-2xl flex items-center justify-center"
         >
           {/* -- Nav Links -- */}
-          <div className="grid place-items-center">
+          <div className="grid place-items-center ">
           {menuItems.map((item) => (
             <ul className="text-5xl pb-3 w-full">
               <li><a onClick={handleToggle} className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>

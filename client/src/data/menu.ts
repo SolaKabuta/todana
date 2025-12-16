@@ -23,6 +23,6 @@ export const contactMenuItems: MenuItem[] = [
 
 export const socialMenuItems: MenuItem[] = [
   { label: "Behance", id:"", path: "https://www.behance.com/solakabuta/", image: "/assets/images/navbar/instagram.jpg" },
-  { label: "Twitter(X)",id:"",  path: "", image: ""},
+  { label: "Twitter(X)",id:"",  path: "https://x.com/sola_kabuta", image: ""},
   { label: "LinkedIn", id:"", path: "https://www.linkedin.com/in/sola-kabuta/", image: "/assets/images/navbar/linkedin.jpg" },
 ]
