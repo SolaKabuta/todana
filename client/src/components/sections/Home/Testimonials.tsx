@@ -1,3 +1,4 @@
+import { testimonials } from "@/data/testimonials";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -37,13 +38,26 @@ export default function Testimonials() {
       <div className="">
         {/*<p className="pb-5">Results that speaks volume</p>*/}
         <p>
-          Don't just take our words for it! Hear from our satisfied
-          clients <br /> who have transformed their ideas through our craft.
+          Don't just take our words for it! Hear from our satisfied clients{" "}
+          <br /> who have transformed their ideas through our craft.
         </p>
       </div>
       {/* -- Testimonials Section -- */}
-      <section className="grid grid-cols-4">
-        
+      <section className="pt-10">
+        <div className="grid grid-cols-2 gap-5 pb-3">
+          {testimonials.map((item, index) => (
+            <ul className="bg-white text-primary border border-white rounded-2xl mb-3 p-5" key={index}>
+              <li className="font-medium pb-10">{item.feedback}</li>
+              <section className="flex gap-3 items-center">
+                <img className="rotation" src={item.icon} alt="todana icon" width={30} height={30} />
+                <div>
+                  <p className="font-black">{item.name}</p>
+                  <p>{item.role}</p>
+                </div>
+              </section>
+            </ul>
+          ))}
+        </div>
       </section>
     </main>
   );
