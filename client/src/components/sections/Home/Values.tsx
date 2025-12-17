@@ -29,7 +29,7 @@ export default function Values() {
   return (
     <main
       ref={containerRef}
-      className="bottom-top min-h-screen w-screen bg-accent text-primary pt-5 p-10"
+      className="bottom-top min-h-screen w-screen bg-accent text-primary pt-5"
     >
       <div className="bottom-top flex gap-3 items-center">
         <img

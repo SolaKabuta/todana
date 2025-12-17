@@ -31,7 +31,7 @@ export default function Hero() {
   }, {});
 
   return (
-    <main className="relative z-30 bg-accent text-primary grid md:grid-cols-3 gap-20 place-content-center min-h-screen w-screen px-10">
+    <main className="relative z-30 bg-accent text-primary grid md:grid-cols-3 gap-20 place-content-center min-h-screen w-screen">
       <section ref={heroRef} className=" col-span-3 text-center [&_p]:py-5">
         <div className="title flex justify-center gap-2 md:gap-5 xl:items-center">
           <h1 className="text-5xl md:text-7xl xl:text-9xl uppercase font-black">

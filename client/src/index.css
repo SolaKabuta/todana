@@ -184,4 +184,15 @@ button:focus-visible {
   }
 }
 
+main {
+    padding-left: 20px;
+    padding-right: 20px; 
+}
 
+
+@media (width >= 96rem) {
+    main {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}

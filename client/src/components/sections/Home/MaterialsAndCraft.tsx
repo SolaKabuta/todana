@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
-import SplineCard from "@/components/ui/SplineCard";
+import SplineCard from "@/components/layout/SplineCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
