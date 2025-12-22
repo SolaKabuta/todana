@@ -1,3 +1,17 @@
+export interface Furniture {
+    id: number;
+    name: string;
+    description: string;
+    handmade: boolean;
+    image: string;
+    imageHover: string;
+    imageFiche: string;
+    dimensions: string;
+    color: string;
+    numberColor: string;
+    category: 'chair' | 'dining-table' | 'arm-chair' | 'sofa' | 'coffee-table';
+}
+
 export const furnitures = [
     {
         id: 1,
@@ -271,4 +285,3 @@ export const furnitures = [
 
 ];
 
-export type Furniture = typeof furnitures[number];
