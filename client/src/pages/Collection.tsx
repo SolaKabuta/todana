@@ -36,7 +36,7 @@ export default function Collection() {
         </div>
         <div className="pb-40">
           <p>
-            Each Todana collection explores a dialogue between form, material,
+            Each piece explores a dialogue between form, material,
             and space. From seating to lighting, every piece is <br />
             designed as part of a coherent system — modular, expressive, and
             built to last.

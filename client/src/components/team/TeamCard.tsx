@@ -31,7 +31,8 @@ export default function TeamCard() {
             <img
               className="object-cover rounded-lg pb-5 grayscale transition-all duration-500 group-hover:p-1 hover:grayscale-0"
               src={item.photo}
-              alt=""
+              alt={item.alt}
+              loading="lazy" 
             />
           </div>
           <p className="uppercase">{item.name}</p>
