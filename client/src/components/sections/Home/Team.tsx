@@ -74,6 +74,7 @@ export default function About() {
           <TeamCard />
         </div>
       </section>
+      
       {/* -- Desktop Version End -- */}
       
       {/* -- Mobile Version Start -- */}
@@ -93,14 +94,15 @@ export default function About() {
             {teamMembers.map((item, i) => (
               <CarouselItem
                 key={i}
-                className=" cursor-grab relative group"
+                className="w-10 cursor-grab relative group"
               >
                 <div className="bg-primary p-5 rounded-lg group">
                   <div className="rounded-lg ">
                     <img
                       className="object-cover rounded-lg pb-5 grayscale transition-all duration-500 group-hover:p-1 hover:grayscale-0"
                       src={item.photo}
-                      alt=""
+                      alt={item.alt}
+                      loading="lazy"
                     />
                   </div>
                   <p className="uppercase">{item.name}</p>
