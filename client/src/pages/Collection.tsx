@@ -19,7 +19,7 @@ export default function Collection() {
   });
   
   return (
-    <main ref={containerRef} className="h-screen w-screen text-white grid grid-rows-2 place-content-center items-center">
+    <main ref={containerRef} className="min-h-screen w-screen text-white grid items-center pb-10">
       {/* -- Title/Texts Section -- */}
       <section>
         <div className="flex gap-3 items-center">
@@ -30,11 +30,11 @@ export default function Collection() {
             width={30}
             height={30}
           />
-          <h1 className="text-5xl uppercase py-10">
+          <h1 className="text-5xl uppercase py-40">
             Collection <span className="text-xs align-top">(01)</span>
           </h1>
         </div>
-        <div>
+        <div className="pb-40">
           <p>
             Each Todana collection explores a dialogue between form, material,
             and space. From seating to lighting, every piece is <br />
@@ -44,11 +44,10 @@ export default function Collection() {
         </div>
       </section>
       {/* -- Furniture Collection Section -- */}
-      <section className="grid grid-cols-7 gap-3">
-        {furnitures.map((index, item) => (
-         <ul key={index}>
-            <li>{item.image}</li>
-            <div className="bg-red-600 h-10 w-10"></div>
+      <section className="grid grid-cols-4 gap-3">
+        {furnitures.map((item) => (
+         <ul>
+            <li><img src={item.image} alt="" /></li>
          </ul> 
         ))}
       </section>
