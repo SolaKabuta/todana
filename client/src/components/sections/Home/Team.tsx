@@ -63,7 +63,7 @@ export default function About() {
             Our team<span className="text-xs align-top">(04)</span>
           </h1>
         </div>
-        <div className="text-center">
+        <div className="text-center pb-10">
           <p>The team crafting your experience.</p>
           <p>
             We combine creativity and technical expertise to bring your vision

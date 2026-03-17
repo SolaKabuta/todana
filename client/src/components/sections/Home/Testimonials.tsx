@@ -19,7 +19,7 @@ export default function Testimonials() {
   return (
     <main
       ref={containerRef}
-      className="h-screen w-screen bg-primary text-white p-10"
+      className="min-h-screen w-screen bg-primary text-white p-10"
     >
       {/* -- Title -- */}
       <section className="flex gap-3 items-center">

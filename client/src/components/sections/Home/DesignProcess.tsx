@@ -158,7 +158,7 @@ export default function DesignProcess() {
                 {/* -- CTA -- */}
                 <Button
                   variant={"secondary"}
-                  className="slide-up mt-10 w-full"
+                  className="slide-up mt-10 w-full mb-10"
                   aria-label="button discover the collection"
                 >
                   Discover our collection

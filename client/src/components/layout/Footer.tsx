@@ -111,7 +111,7 @@ export default function Footer() {
       </section>
       {/* -- Legal Mentions -- */}
       <section className="show grid lg:grid-cols-3 items-center py-3">
-        <p>2025 Todana. All right reserved.</p>
+        <p>2026 Todana. All right reserved.</p>
         <div>
          <ul className="flex lg:justify-center gap-3 [&_li]:underline">
            <li><a href="/">Privacy Policy</a></li>

@@ -44,7 +44,7 @@ export default function Values() {
           <span className="bottom-top text-xs align-top">(06)</span>
         </h1>
       </div>
-      <section className="bottom-top flex flex-col gap-3 pt-10">
+      <section className="bottom-top flex flex-col gap-3 py-10">
         <div className="bg-primary h-80 rounded-xl w-full"></div>
         <div className="bg-primary h-80 rounded-xl w-full"></div>
         <div className="bg-primary h-80 rounded-xl w-full"></div>
