@@ -30,7 +30,7 @@ export default function Footer() {
       duration: 4,
       stagger: 1,
       ease: "back.out(1.7)",
-      
+
       scrollTrigger: {
         trigger: ".show",
         start: "top 120%",
@@ -38,7 +38,7 @@ export default function Footer() {
         toggleActions: "play none none reverse"
       }
     });
-    
+
   }, { scope: footerRef });
 
   return (
@@ -105,17 +105,17 @@ export default function Footer() {
           <ul className="w-full" key={index}>
             <li className="px-10 py-15 border border-spacing-4 uppercase transition duration-300 hover:text-white hover:bg-primary hover:translate-x-2 group">
               <a className="flex transition duration-300 group-hover:-translate-x-4" href={item.path} target="_blank">{item.label}
-              <div>
-              <svg className="transition duration-500 group-hover:rotate-45 group-hover:translate-x-2" width={24} height={24} viewBox="0 0 24 24" fill="none">
-                  <path
+                <div>
+                  <svg className="transition duration-500 group-hover:rotate-45 group-hover:translate-x-2" width={24} height={24} viewBox="0 0 24 24" fill="none">
+                    <path
                       d="M7 17L17 7M17 7H7M17 7V17"
                       stroke="currentColor"
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                  />
-              </svg>
-              </div>
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -125,10 +125,10 @@ export default function Footer() {
       <section className="show grid lg:grid-cols-3 items-center py-3">
         <p>2026 Todana. All right reserved.</p>
         <div>
-         <ul className="flex lg:justify-center gap-3 [&_li]:underline">
-           <li><a onClick={(e) => handleLinkClick(e, "/")} onMouseEnter={() => router.prefetch("/")} href="/">Privacy Policy</a></li>
-           <li><a onClick={(e) => handleLinkClick(e, "/")} onMouseEnter={() => router.prefetch("/")} href="/">Terms of Services</a></li>
-         </ul> 
+          <ul className="flex lg:justify-center gap-3 [&_li]:underline">
+            <li><a onClick={(e) => handleLinkClick(e, "/")} onMouseEnter={() => router.prefetch("/")} href="/">Privacy Policy</a></li>
+            <li><a onClick={(e) => handleLinkClick(e, "/")} onMouseEnter={() => router.prefetch("/")} href="/">Terms of Services</a></li>
+          </ul>
         </div>
         <p className="lg:text-right">Design and developed by <span className="text-primary"><a target="_blank" href="https://solakabuta.com">Sola Kabuta</a></span></p>
       </section>

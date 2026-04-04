@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 // interface Testimonials {
@@ -32,7 +33,7 @@ export default function Values() {
       className="bottom-top min-h-screen w-screen bg-accent text-primary pt-5"
     >
       <div className="bottom-top flex gap-3 items-center">
-        <img
+        <Image
           className="rotation"
           src="/assets/icons/wheel.svg"
           alt="wheel icon"

@@ -3,6 +3,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +14,7 @@ export default function Hero() {
     const hasAnimated = sessionStorage.getItem("heroAnimated");
 
     if (!hasAnimated) {
-      gsap.fromTo(".title", 
+      gsap.fromTo(".title",
         {
           y: 50,
           opacity: 0,
@@ -31,16 +32,16 @@ export default function Hero() {
     } else {
       gsap.set(".title", { opacity: 1, y: 0 });
     }
-    
+
     // Icon animation
-    
+
     gsap.to(".rotation", {
-      rotation: 360,          
+      rotation: 360,
       duration: 6,
       repeat: -2,
     });
-    
-   
+
+
   }, { scope: heroRef });
 
   return (
@@ -50,18 +51,18 @@ export default function Hero() {
           <h1 className="text-5xl md:text-7xl xl:text-9xl uppercase font-black">
             <span className="relative -z-30">戸棚 </span> Todana
           </h1>
-          <img
+          <Image
             className="md:w-15 xl:w-40"
             src="/assets/logo/logo_primary.svg"
             alt="todana logo"
-            width={30}
-            height={30}
+            width={160}
+            height={160}
           />
         </div>
         <div className="title opacity-0">
           <div className="flex justify-center gap-3 items-center">
             {/* -- Rotating Wheel Icon -- */}
-            <img className="rotation" src="/assets/icons/wheel.svg" alt="wheel icon" width={30} height={30}/>
+            <Image className="rotation" src="/assets/icons/wheel.svg" alt="wheel icon" width={30} height={30} />
             <p className="italic font-black">
               Design Elevated. Spaces Refined.
             </p>
@@ -75,12 +76,13 @@ export default function Hero() {
           </p>
         </div>
         {/* -- Chair Hero Image -- */}
-        <img
+        <Image
           className="title opacity-0 absolute -z-20 top-165 md:top-10 lg:top-10 2xl:top-0 left-1/2 -translate-x-1/2"
           src="/assets/images/home/blue_chair.png"
-          alt=""
+          alt="hero chair"
           width={2500}
           height={1200}
+          priority
         />
       </section>
       <div className="title opacity-0">

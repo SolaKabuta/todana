@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 // import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 import { furnitures } from "@/data/furnitures";
 
@@ -47,7 +48,7 @@ export default function Gallery() {
     >
       <section className="appear z-50">
         <div className="flex gap-3 items-center">
-          <img
+          <Image
             className="rotation"
             src="/assets/icons/wheel_white.svg"
             alt="wheel icon"
@@ -102,10 +103,10 @@ export default function Gallery() {
                 key={i}
                 className="cursor-grab relative md:basis-1/2 group"
               >
-                <img
+                <Image
                   className="h-screen w-fill object-cover transition-all duration-500 group-hover:p-5"
                   src={item.image}
-                  alt="/"
+                  alt={item.name}
                   width={2000}
                   height={2000}
                   loading="lazy"

@@ -1,4 +1,5 @@
 import { testimonials } from "@/data/testimonials";
+import Image from "next/image";
 
 // interface ComponentNameProps {
 //   propName: type;
@@ -14,7 +15,7 @@ export default function TestimonalCard() {
         >
           <li className="font-medium pb-10">{item.feedback}</li>
           <section className="flex gap-3 items-center">
-            <img
+            <Image
               className="rotation"
               src={item.icon}
               alt="todana icon"
@@ -23,7 +24,13 @@ export default function TestimonalCard() {
             />
             <div>
               <div className="flex gap-3">
-                <img src={item.avatar} alt="testimonial avatar" />
+                <Image 
+                  src={item.avatar} 
+                  alt="testimonial avatar" 
+                  width={40} 
+                  height={40}
+                  className="rounded-full"
+                />
                 <p className="font-black">{item.name}</p>
               </div>
               <p>{item.role}</p>

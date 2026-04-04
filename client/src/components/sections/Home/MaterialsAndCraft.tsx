@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import SplineCard from "@/components/layout/SplineCard";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,14 +40,14 @@ export default function MaterialsAndCraft() {
       {/* -- Materials section -- */}
       <section className="slide hidden  md:col-start-1 row-span-full md:block gap-10">
         <div>
-          <SplineCard/> 
+          <SplineCard />
         </div>
       </section>
 
       {/* -- Title and texts section -- */}
       <section className="slide md:col-start-2">
         <div className="flex gap-3 items-center">
-          <img
+          <Image
             className="rotation"
             src="/assets/icons/wheel_white.svg"
             alt="wheel icon"
@@ -84,7 +85,7 @@ export default function MaterialsAndCraft() {
             Guided by Japanese craftsmanship, our finish work favors honesty:
             hand‑rubbed oils, brushed metals, and subtle edges that age
             gracefully. The result is a coherent system—modular, expressive, and
-            built to live with you.
+            built to last.
           </p>
 
           {/* -- Micro-believability line -- */}
@@ -103,7 +104,7 @@ export default function MaterialsAndCraft() {
           <Button variant={"outline"}>View specs & care </Button>
         </div>
       </section>
-      
+
     </main>
   );
 }

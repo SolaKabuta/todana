@@ -1,20 +1,21 @@
 "use client";
 
-import { furnitures } from "@/data/furnitures"; 
+import { furnitures } from "@/data/furnitures";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Collection() {
-  
+
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   // Removed dead empty GSAP hook
-  
+
   return (
     <main ref={containerRef} className="min-h-screen w-screen text-white grid items-center pb-10">
       {/* -- Title/Texts Section -- */}
       <section>
         <div className="flex gap-3 items-center">
-          <img
+          <Image
             className="rotation"
             src="/assets/icons/wheel_white.svg"
             alt="wheel icon"
@@ -37,9 +38,17 @@ export default function Collection() {
       {/* -- Furniture Collection Section -- */}
       <section className="grid grid-cols-4 gap-3">
         {furnitures.map((item, index) => (
-         <ul key={item.id || index}>
-            <li><img src={item.image} alt="" /></li>
-         </ul> 
+          <ul key={item.id || index}>
+            <li>
+              <Image 
+                src={item.image} 
+                alt={item.name} 
+                width={500} 
+                height={500}
+                className="rounded-lg"
+              />
+            </li>
+          </ul>
         ))}
       </section>
     </main>

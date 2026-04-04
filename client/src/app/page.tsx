@@ -13,15 +13,15 @@ export default function Home() {
   return (
     <>
       <div className="overflow-hidden">
-      <Hero/>
-      <Gallery/>
-      <MaterialsAndCraft/>
-      <DesignProcess/>
-      <Team/>
-      <Story/>
-      <Values/>
-      <Testimonials/>
-      <Contact/>
+        <Hero />
+        <Gallery />
+        <MaterialsAndCraft />
+        <DesignProcess />
+        <Team />
+        <Story />
+        <Values />
+        <Testimonials />
+        <Contact />
       </div>
     </>
   );
