@@ -3,6 +3,7 @@
 import { menuItems, contactMenuItems, socialMenuItems } from "@/data/menu";
 import { Button } from "../ui/button";
 import { useTransition } from "./TransitionProvider";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react";
@@ -11,8 +12,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
-  // const [isOpen, setIsOpen] = useState<boolean>(false);
   const { navigateWithTransition } = useTransition();
+  const router = useRouter();
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (path.startsWith("/")) {
@@ -38,7 +39,7 @@ export default function Footer() {
       }
     });
     
-  }, {});
+  }, { scope: footerRef });
 
   return (
     <footer
@@ -65,7 +66,7 @@ export default function Footer() {
           {menuItems.map((item, index) => (
             <ul key={index}>
               <li className="w-fit transition duration-300 hover:text-primary">
-                <a onClick={(e) => handleLinkClick(e, item.path)} href={item.path}>{item.label}<span className="ml-2 text-xs float-end">{item.id}</span></a>
+                <a onClick={(e) => handleLinkClick(e, item.path)} onMouseEnter={() => router.prefetch(item.path)} href={item.path}>{item.label}<span className="ml-2 text-xs float-end">{item.id}</span></a>
               </li>
             </ul>
           ))}
@@ -76,7 +77,7 @@ export default function Footer() {
           {contactMenuItems.map((item, index) => (
             <ul key={index}>
               <li className="w-fit transition duration-300 hover:text-primary">
-                <a onClick={(e) => handleLinkClick(e, item.path)} href={item.path} target="_blank">{item.label}</a>
+                <a onClick={(e) => handleLinkClick(e, item.path)} onMouseEnter={() => router.prefetch(item.path)} href={item.path} target="_blank">{item.label}</a>
               </li>
             </ul>
           ))}
@@ -125,8 +126,8 @@ export default function Footer() {
         <p>2026 Todana. All right reserved.</p>
         <div>
          <ul className="flex lg:justify-center gap-3 [&_li]:underline">
-           <li><a onClick={(e) => handleLinkClick(e, "/")} href="/">Privacy Policy</a></li>
-           <li><a onClick={(e) => handleLinkClick(e, "/")} href="/">Terms of Services</a></li>
+           <li><a onClick={(e) => handleLinkClick(e, "/")} onMouseEnter={() => router.prefetch("/")} href="/">Privacy Policy</a></li>
+           <li><a onClick={(e) => handleLinkClick(e, "/")} onMouseEnter={() => router.prefetch("/")} href="/">Terms of Services</a></li>
          </ul> 
         </div>
         <p className="lg:text-right">Design and developed by <span className="text-primary"><a target="_blank" href="https://solakabuta.com">Sola Kabuta</a></span></p>

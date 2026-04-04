@@ -29,7 +29,7 @@ export default function MaterialsAndCraft() {
       duration: 6,
       repeat: -2,
     });
-  }, {});
+  }, { scope: containerRef });
 
   return (
     <main

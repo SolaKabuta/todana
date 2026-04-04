@@ -10,14 +10,27 @@ export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.from(".title", {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      delay: 0.5,
-      ease: "back.out(1.7)",
-    });
+    const hasAnimated = sessionStorage.getItem("heroAnimated");
+
+    if (!hasAnimated) {
+      gsap.fromTo(".title", 
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.2,
+          delay: 0.8, // Ensures the blackout curtain fully drops before it starts
+          ease: "back.out(1.7)",
+        }
+      );
+      sessionStorage.setItem("heroAnimated", "true");
+    } else {
+      gsap.set(".title", { opacity: 1, y: 0 });
+    }
     
     // Icon animation
     
@@ -28,12 +41,12 @@ export default function Hero() {
     });
     
    
-  }, {});
+  }, { scope: heroRef });
 
   return (
-    <main className="relative z-30 bg-accent text-primary grid md:grid-cols-3 gap-20 place-content-center min-h-screen w-screen">
-      <section ref={heroRef} className=" col-span-3 text-center [&_p]:py-5">
-        <div className="title flex justify-center gap-2 md:gap-5 xl:items-center">
+    <main ref={heroRef} className="relative z-30 bg-accent text-primary grid md:grid-cols-3 gap-20 place-content-center min-h-screen w-screen">
+      <section className=" col-span-3 text-center [&_p]:py-5">
+        <div className="title opacity-0 flex justify-center gap-2 md:gap-5 xl:items-center">
           <h1 className="text-5xl md:text-7xl xl:text-9xl uppercase font-black">
             <span className="relative -z-30">戸棚 </span> Todana
           </h1>
@@ -45,7 +58,7 @@ export default function Hero() {
             height={30}
           />
         </div>
-        <div className="title">
+        <div className="title opacity-0">
           <div className="flex justify-center gap-3 items-center">
             {/* -- Rotating Wheel Icon -- */}
             <img className="rotation" src="/assets/icons/wheel.svg" alt="wheel icon" width={30} height={30}/>
@@ -63,14 +76,14 @@ export default function Hero() {
         </div>
         {/* -- Chair Hero Image -- */}
         <img
-          className="title absolute -z-20 top-165 md:top-10 lg:top-10 2xl:top-0 left-1/2 -translate-x-1/2"
+          className="title opacity-0 absolute -z-20 top-165 md:top-10 lg:top-10 2xl:top-0 left-1/2 -translate-x-1/2"
           src="/assets/images/home/blue_chair.png"
           alt=""
           width={2500}
           height={1200}
         />
       </section>
-      <div className="title">
+      <div className="title opacity-0">
         <p className="italic font-black text-balance py-5">
           Furniture with a Quiet Confidence
         </p>
@@ -80,10 +93,10 @@ export default function Hero() {
           Where design becomes a way of living.
         </p>
       </div>
-      <div className="title flex justify-center items-center">
+      <div className="title opacity-0 flex justify-center items-center">
         <Button>Discover</Button>
       </div>
-      <div className="title text-right text-xs md:text-sm text-balance">
+      <div className="title opacity-0 text-right text-xs md:text-sm text-balance">
         <p className="italic font-black py-5">Crafted for Modern Life</p>
         <p>
           From chairs and sofas to lighting and storage, <br /> every object is

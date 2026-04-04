@@ -31,7 +31,7 @@ export default function DesignProcess() {
     });
 
     
-  }, {});
+  }, { scope: containerRef });
 
   return (
     <main

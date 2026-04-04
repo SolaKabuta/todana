@@ -24,15 +24,15 @@ export default function TeamCard() {
   );
 
   return (
-    <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white">
-      {teamMembers.map((item) => (
-        <div className=" bg-primary p-5 rounded-lg group">
+    <main ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white">
+      {teamMembers.map((item, index) => (
+        <div key={index} className=" bg-primary p-5 rounded-lg group">
           <div className=" w-fit h-fit rounded-lg ">
             <img
               className="object-cover rounded-lg pb-5 grayscale transition-all duration-500 group-hover:p-1 hover:grayscale-0"
               src={item.photo}
               alt={item.alt}
-              loading="lazy" 
+              loading="lazy"
             />
           </div>
           <p className="uppercase">{item.name}</p>

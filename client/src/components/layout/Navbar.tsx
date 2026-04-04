@@ -3,6 +3,7 @@
 import { menuItems, socialMenuItems } from "@/data/menu";
 import { useEffect, useRef, useState } from "react";
 import { useTransition } from "./TransitionProvider";
+import { useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,10 +13,13 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { navigateWithTransition } = useTransition();
+  const router = useRouter();
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (path.startsWith("/")) {
       e.preventDefault();
+      // On masque immédiatement le menu pour ne pas polluer l'animation de transition !
+      tl.current?.progress(0).pause();
       setIsOpen(false);
       navigateWithTransition(path);
     }
@@ -98,7 +102,7 @@ export default function Navbar() {
       aria-label="Primary Navigation"
     >
       {/* -- Burger Menu -- */}
-      <section className="fixed z-70 top-0 left-0 right-0 flex items-center justify-center p-5">
+      <section className="fixed z-[70] top-0 left-0 right-0 flex items-center justify-center p-5">
         <div className="flex items-center gap-4">
           <button
             onClick={handleToggle}
@@ -121,24 +125,24 @@ export default function Navbar() {
       {/* -- Menu Overlay -- */}
       <section>
         {/* -- Black Screen Overlay -- */}
-        <div onClick={handleToggle} className="backdrop-overlay fixed inset-0 z-60 bg-black/80 opacity-0 invisible"></div>
+        <div onClick={handleToggle} className="backdrop-overlay fixed inset-0 z-[60] bg-black/80 opacity-0 invisible"></div>
         {/* -- Actual Menu Overlay -- */}
         <div
           id="navbar-overlay"
-          className="invisible fixed z-70 top-20 left-1/2 -translate-x-1/2 bg-white rounded-xl h-[80vh] w-full lg:w-[500px] -translate-y-full opacity-0 shadow-2xl flex items-center justify-center"
+          className="invisible fixed z-[70] top-20 left-1/2 -translate-x-1/2 bg-white rounded-xl h-[80vh] w-full lg:w-[500px] -translate-y-full opacity-0 shadow-2xl flex items-center justify-center"
         >
           {/* -- Nav Links -- */}
           <div className="grid place-items-center ">
             {menuItems.map((item, index) => (
             <ul key={index} className="text-5xl pb-3 w-full">
-              <li><a onClick={(e) => handleLinkClick(e, item.path)} className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
+              <li><a onClick={(e) => handleLinkClick(e, item.path)} onMouseEnter={() => router.prefetch(item.path)} className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
             </ul>
           ))}
             {/* -- Social Links -- */}
             <div className="pt-20">
               {socialMenuItems.map((item, index) => (
             <ul key={index}>
-              <li><a onClick={(e) => handleLinkClick(e, item.path)} className="w-full transition duration-300 hover:text-secondary" href={item.path}>{item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
+              <li><a onClick={(e) => handleLinkClick(e, item.path)} onMouseEnter={() => router.prefetch(item.path)} className="w-full transition duration-300 hover:text-secondary" href={item.path}>{item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
             </ul>
           ))}
             </div>

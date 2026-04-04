@@ -38,7 +38,7 @@ export default function Gallery() {
       duration: 6,
       repeat: -2,
     });
-  }, {});
+  }, { scope: galleryRef });
 
   return (
     <main
