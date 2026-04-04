@@ -1,5 +1,8 @@
+"use client";
+
 import { menuItems, socialMenuItems } from "@/data/menu";
 import { useEffect, useRef, useState } from "react";
+import { useTransition } from "./TransitionProvider";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,13 +11,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { navigateWithTransition } = useTransition();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (path.startsWith("/")) {
+      e.preventDefault();
+      setIsOpen(false);
+      navigateWithTransition(path);
+    }
+  };
 
   // 1. On attache la ref au container GLOBAL (nav) pour tout contrôler dedans
   const containerRef = useRef<HTMLElement>(null);
 
   // 2. On utilise useRef au lieu de useState pour la timeline
   // (Meilleure performance : pas de re-rendu quand on la stocke)
-  const tl = useRef<gsap.core.Timeline>();
+  const tl = useRef<gsap.core.Timeline | null>(null);
 
   useGSAP(
     () => {
@@ -47,20 +59,20 @@ export default function Navbar() {
           },
           "<",
         ); // "<" = En même temps que le fond noir
-     
+
       gsap.from(".nav-links", {
         y: 50,
         duration: 1,
         stagger: 0.8,
-  
+
         scrollTrigger: {
           trigger: ".nav-links",
           start: "top 100%",
           scrub: 1,
           toggleActions: "play none none reverse",
         },
-      }); 
-      
+      });
+
     },
     { scope: containerRef },
   ); // Scope vital !pe vital !
@@ -117,19 +129,19 @@ export default function Navbar() {
         >
           {/* -- Nav Links -- */}
           <div className="grid place-items-center ">
-          {menuItems.map((item) => (
-            <ul className="text-5xl pb-3 w-full">
-              <li><a onClick={handleToggle} className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
+            {menuItems.map((item, index) => (
+            <ul key={index} className="text-5xl pb-3 w-full">
+              <li><a onClick={(e) => handleLinkClick(e, item.path)} className="w-full transition duration-300 hover:text-secondary" href={item.path}>/ {item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
             </ul>
           ))}
-          {/* -- Social Links -- */}
-          <div className="pt-20">
-          {socialMenuItems.map((item) => (
-            <ul>
-              <li><a className="w-full transition duration-300 hover:text-secondary" href={item.path}>{item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
+            {/* -- Social Links -- */}
+            <div className="pt-20">
+              {socialMenuItems.map((item, index) => (
+            <ul key={index}>
+              <li><a onClick={(e) => handleLinkClick(e, item.path)} className="w-full transition duration-300 hover:text-secondary" href={item.path}>{item.label}<span className="ml-13 text-xs float-end">{item.id}</span></a></li>
             </ul>
           ))}
-          </div>
+            </div>
           </div>
         </div>
       </section>

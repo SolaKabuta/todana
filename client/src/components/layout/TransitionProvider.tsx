@@ -1,5 +1,7 @@
+"use client";
+
 import { createContext, useContext, useRef, useState, ReactNode } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useRouter, usePathname } from "next/navigation";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -13,8 +15,8 @@ const TransitionContext = createContext<TransitionContextType>({
 });
 
 export const TransitionProvider = ({ children }: { children: ReactNode }) => {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
+  const pathname = usePathname();
   
   // Notre rideau (l'overlay)
   const containerRef = useRef<HTMLDivElement>(null);
@@ -24,7 +26,7 @@ export const TransitionProvider = ({ children }: { children: ReactNode }) => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Notre Timeline stockée
-  const tl = useRef<gsap.core.Timeline>();
+  const tl = useRef<gsap.core.Timeline | null>(null);
 
   useGSAP(() => {
     // On définit l'animation du rideau UNE FOIS
@@ -54,40 +56,11 @@ export const TransitionProvider = ({ children }: { children: ReactNode }) => {
   }, { scope: containerRef });
 
   // --- LA FONCTION MAGIQUE ---
-  const navigateWithTransition = (to: string) => {
-    // Sécurité : Si on est déjà en transition ou si on va sur la même page, on ne fait rien
-    if (isTransitioning || location.pathname === to) return;
-
-    setIsTransitioning(true);
-
-    // 1. On joue la première moitié de l'animation (Le rideau couvre l'écran)
-    // tweenTo accepte un temps ou un label. Ici on triche un peu en calculant la moitié.
-    // Mais pour faire simple, on va jouer jusqu'au changement d'origine.
-    
-    tl.current?.play().then(() => {
-        // C'est ici, quand l'écran est TOUT NOIR, qu'on change de page
-        navigate(to);
-        
-        // Petite pause pour laisser React charger la nouvelle page
-        // (Optionnel mais recommandé pour les grosses pages)
-        setTimeout(() => {
-            // 2. On finit l'animation (Le rideau se révèle)
-            // On redémarre l'anim depuis la fin de l'étape 1 ? 
-            // Non, GSAP est malin. Comme on a fait un play() complet, il faut ruser.
-            // Le plus simple pour ce style "Pass through" est de faire restart() 
-            // MAIS on va utiliser une méthode plus simple :
-            
-            // On a joué toute la timeline ? Non.
-            // Simplifions la timeline pour toi :
-        }, 100);
-    });
-  };
-  
   // Correction pour la timeline "Pass Through" (Traversée)
   // La logique précédente était complexe. Faisons plus simple avec des callbacks.
   
   const simpleNavigate = (to: string) => {
-      if (isTransitioning || location.pathname === to) return;
+      if (isTransitioning || pathname === to) return;
       setIsTransitioning(true);
 
       // A. RIDEAU MONTE
@@ -98,7 +71,7 @@ export const TransitionProvider = ({ children }: { children: ReactNode }) => {
           ease: "power3.inOut",
           onComplete: () => {
               // B. CHANGEMENT DE PAGE
-              navigate(to);
+              router.push(to);
               
               // C. RIDEAU DESCEND (vers le haut)
               // On attend un tout petit peu que le DOM se mette à jour
