@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
-import SplineCard from "@/components/layout/SplineCard";
+// import SplineCard from "@/components/layout/SplineCard";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,7 +40,7 @@ export default function MaterialsAndCraft() {
       {/* -- Materials section -- */}
       <section className="slide hidden  md:col-start-1 row-span-full md:block gap-10">
         <div>
-          <SplineCard />
+          {/*<SplineCard />*/}
         </div>
       </section>
 

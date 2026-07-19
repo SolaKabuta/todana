@@ -356,3 +356,95 @@
 {"timestamp":"03:46:01.956","source":"Server","level":"LOG","message":"✓ Compiled in 26ms"}
 {"timestamp":"03:46:02.704","source":"Server","level":"LOG","message":"✓ Compiled in 123ms"}
 {"timestamp":"03:46:07.028","source":"Server","level":"LOG","message":"✓ Compiled in 103ms"}
+{"timestamp":"03:55:43.233","source":"Browser","level":"WARN","message":"GSAP target .nav-links not found. https://gsap.com"}
+{"timestamp":"03:55:43.234","source":"Browser","level":"WARN","message":"GSAP target  not found. https://gsap.com"}
+{"timestamp":"03:55:43.234","source":"Browser","level":"WARN","message":"Element not found: .nav-links"}
+{"timestamp":"03:55:43.235","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mGSAP target .nav-links not found. https://gsap.com\\u001b[39m\" \"\\u001b[2m(src/components/layout/Navbar.tsx:67:12)\\u001b[22m\""}
+{"timestamp":"03:55:43.236","source":"Browser","level":"WARN","message":"\u001b[33mGSAP target .nav-links not found. https://gsap.com\u001b[39m"}
+{"timestamp":"03:55:43.278","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mGSAP target  not found. https://gsap.com\\u001b[39m\" \"\\u001b[2m(src/components/layout/Navbar.tsx:67:12)\\u001b[22m\""}
+{"timestamp":"03:55:43.278","source":"Browser","level":"WARN","message":"\u001b[33mGSAP target  not found. https://gsap.com\u001b[39m"}
+{"timestamp":"03:55:43.278","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mElement not found:\\u001b[39m\" \"\\u001b[33m.nav-links\\u001b[39m\" \"\\u001b[2m(src/components/layout/Navbar.tsx:67:12)\\u001b[22m\""}
+{"timestamp":"03:55:43.278","source":"Browser","level":"WARN","message":"\u001b[33mElement not found:\u001b[39m \"\\u001b[33m.nav-links\\u001b[39m\""}
+{"timestamp":"03:56:01.714","source":"Server","level":"LOG","message":"✓ Compiled in 0ms"}
+{"timestamp":"03:56:01.718","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/assets/icons/wheel_white.svg\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"03:56:01.721","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/assets/icons/wheel_white.svg\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\" \"\\u001b[2m(file:///Users/kam/Documents/Docs/Developer/Projects/todana/.next/dev/static/chunks/node_modules_1mbbmrq._.js:3050:40)\\u001b[22m\""}
+{"timestamp":"03:56:01.721","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/assets/icons/wheel_white.svg\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"03:56:02.138","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mupdating from \\u001b[39m\" 120 \"\\u001b[33mto \\u001b[39m\" 122"}
+{"timestamp":"03:56:02.138","source":"Browser","level":"WARN","message":"\u001b[33mupdating from \u001b[39m 120 \"\\u001b[33mto \\u001b[39m\" 122"}
+{"timestamp":"03:56:02.138","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.139","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.139","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.139","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.139","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.139","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.139","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.139","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.139","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mupdating from \\u001b[39m\" 120 \"\\u001b[33mto \\u001b[39m\" 122"}
+{"timestamp":"03:56:02.139","source":"Browser","level":"WARN","message":"\u001b[33mupdating from \u001b[39m 120 \"\\u001b[33mto \\u001b[39m\" 122"}
+{"timestamp":"03:56:02.139","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mupdating from \\u001b[39m\" 120 \"\\u001b[33mto \\u001b[39m\" 122"}
+{"timestamp":"03:56:02.139","source":"Browser","level":"WARN","message":"\u001b[33mupdating from \u001b[39m 120 \"\\u001b[33mto \\u001b[39m\" 122"}
+{"timestamp":"03:56:02.139","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.139","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.139","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.139","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"WARN","message":"updating from  120 to  122"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"WARN","message":"updating from  120 to  122"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"WARN","message":"updating from  120 to  122"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.140","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.226","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.226","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.227","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.228","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.228","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.228","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.228","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.228","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.228","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.229","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.229","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.229","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.229","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.229","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.230","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33m[Needle Chrome] The page has created more than 100 distinct THREE.Scene instances — usually a scene is being allocated every frame in a render loop, which is a likely memory/performance leak. Only persistently rendered scenes will be shown. Stack of the scene creation that hit the limit:\\nError\\n    at U (chrome-extension://jonplpbnhmanoekkgcepnedhghflblmo/src/needle-chrome.client.js:2:4)\\n    at T.window.__THREE_DEVTOOLS__.dispatchEvent (chrome-extension://jonplpbnhmanoekkgcepnedhghflblmo/src/needle-chrome.client.js:2:986)\\n    at new Tr (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:13325:269)\\n    at new Ei (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:47619:34)\\n    at new Eb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:48447:9)\\n    at new Rb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:50896:29)\\n    at new wg (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:51011:954)\\n    at new Nb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:51630:25)\\n    at eU.start (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:71548:30)\\n    at async eU.load (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:71498:9)\\n    at async t (http://localhost:3000/_next/static/chunks/node_modules_01f9y8f._.js:1991:17)\\u001b[39m\" \"\\u001b[2m(chrome-extension://jonplpbnhmanoekkgcepnedhghflblmo/src/needle-chrome.client.js:1:1084)\\u001b[22m\""}
+{"timestamp":"03:56:02.230","source":"Browser","level":"WARN","message":"\u001b[33m[Needle Chrome] The page has created more than 100 distinct THREE.Scene instances — usually a scene is being allocated every frame in a render loop, which is a likely memory/performance leak. Only persistently rendered scenes will be shown. Stack of the scene creation that hit the limit:\nError\n    at U (chrome-extension://jonplpbnhmanoekkgcepnedhghflblmo/src/needle-chrome.client.js:2:4)\n    at T.window.__THREE_DEVTOOLS__.dispatchEvent (chrome-extension://jonplpbnhmanoekkgcepnedhghflblmo/src/needle-chrome.client.js:2:986)\n    at new Tr (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:13325:269)\n    at new Ei (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:47619:34)\n    at new Eb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:48447:9)\n    at new Rb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:50896:29)\n    at new wg (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:51011:954)\n    at new Nb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:51630:25)\n    at eU.start (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:71548:30)\n    at async eU.load (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:71498:9)\n    at async t (http://localhost:3000/_next/static/chunks/node_modules_01f9y8f._.js:1991:17)\u001b[39m"}
+{"timestamp":"03:56:02.230","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.230","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.230","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.230","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.230","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.230","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.230","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.230","source":"Browser","level":"WARN","message":"[Needle Chrome] The page has created more than 100 distinct THREE.Scene instances — usually a scene is being allocated every frame in a render loop, which is a likely memory/performance leak. Only persistently rendered scenes will be shown. Stack of the scene creation that hit the limit:\nError\n    at U (chrome-extension://jonplpbnhmanoekkgcepnedhghflblmo/src/needle-chrome.client.js:2:4)\n    at T.window.__THREE_DEVTOOLS__.dispatchEvent (chrome-extension://jonplpbnhmanoekkgcepnedhghflblmo/src/needle-chrome.client.js:2:986)\n    at new Tr (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:13325:269)\n    at new Ei (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:47619:34)\n    at new Eb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:48447:9)\n    at new Rb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:50896:29)\n    at new wg (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:51011:954)\n    at new Nb (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:51630:25)\n    at eU.start (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:71548:30)\n    at async eU.load (http://localhost:3000/_next/static/chunks/node_modules_%40splinetool_runtime_build_runtime_0r-ua2z.js:71498:9)\n    at async t (http://localhost:3000/_next/static/chunks/node_modules_01f9y8f._.js:1991:17)"}
+{"timestamp":"03:56:02.533","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mupdating from \\u001b[39m\" 120 \"\\u001b[33mto \\u001b[39m\" 122"}
+{"timestamp":"03:56:02.534","source":"Browser","level":"WARN","message":"\u001b[33mupdating from \u001b[39m 120 \"\\u001b[33mto \\u001b[39m\" 122"}
+{"timestamp":"03:56:02.534","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.534","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.534","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.534","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.534","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.534","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.535","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.535","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.535","source":"Server","level":"ASSERT","message":"[browser] true"}
+{"timestamp":"03:56:02.535","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.535","source":"Browser","level":"WARN","message":"updating from  120 to  122"}
+{"timestamp":"03:56:02.535","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.535","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.535","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.535","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:02.535","source":"Browser","level":"ASSERT","message":"true"}
+{"timestamp":"03:56:06.476","source":"Browser","level":"WARN","message":"GSAP target .nav-links not found. https://gsap.com"}
+{"timestamp":"03:56:06.476","source":"Browser","level":"WARN","message":"GSAP target  not found. https://gsap.com"}
+{"timestamp":"03:56:06.476","source":"Browser","level":"WARN","message":"Element not found: .nav-links"}
+{"timestamp":"03:56:06.479","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mGSAP target .nav-links not found. https://gsap.com\\u001b[39m\" \"\\u001b[2m(src/components/layout/Navbar.tsx:67:12)\\u001b[22m\""}
+{"timestamp":"03:56:06.481","source":"Browser","level":"WARN","message":"\u001b[33mGSAP target .nav-links not found. https://gsap.com\u001b[39m"}
+{"timestamp":"03:56:06.487","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mGSAP target  not found. https://gsap.com\\u001b[39m\" \"\\u001b[2m(src/components/layout/Navbar.tsx:67:12)\\u001b[22m\""}
+{"timestamp":"03:56:06.487","source":"Browser","level":"WARN","message":"\u001b[33mGSAP target  not found. https://gsap.com\u001b[39m"}
+{"timestamp":"03:56:06.489","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mElement not found:\\u001b[39m\" \"\\u001b[33m.nav-links\\u001b[39m\" \"\\u001b[2m(src/components/layout/Navbar.tsx:67:12)\\u001b[22m\""}
+{"timestamp":"03:56:06.489","source":"Browser","level":"WARN","message":"\u001b[33mElement not found:\u001b[39m \"\\u001b[33m.nav-links\\u001b[39m\""}
+{"timestamp":"03:56:36.994","source":"Server","level":"LOG","message":"✓ Compiled in 26ms"}
