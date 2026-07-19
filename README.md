@@ -11,9 +11,9 @@ The goal is to simulate a real-world furniture brand website: visually refined, 
 
 ## 🎨 Visual Preview
 
-[Hero Section Preview](./public/assets/images/screenshots/screenshot_home.png)
-[Collection Section Preview](./public/assets/images/screenshots/screenshot_collection.png)
-[Team Section Preview](./public/assets/images/screenshots/screenshot_team.png)
+[Hero Section Preview](./public/assets/images/screenshots/screenshot_home.webp)
+[Collection Section Preview](./public/assets/images/screenshots/screenshot_collection.webp)
+[Team Section Preview](./public/assets/images/screenshots/screenshot_team.webp)
 
 
 ### Homepage / Hero
