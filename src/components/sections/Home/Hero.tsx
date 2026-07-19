@@ -62,7 +62,7 @@ export default function Hero() {
         <div className="title opacity-0">
           <div className="flex justify-center gap-3 items-center">
             {/* -- Rotating Wheel Icon -- */}
-            <Image className="rotation" src="/assets/icons/wheel.svg" alt="wheel icon" width={30} height={30} />
+            <Image className="rotation drop-shadow-xs" src="/assets/icons/wheel.svg" alt="wheel icon" width={30} height={30} />
             <p className="italic font-black">
               Design Elevated. Spaces Refined.
             </p>

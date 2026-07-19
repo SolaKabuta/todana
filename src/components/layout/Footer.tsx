@@ -44,7 +44,7 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative w-screen bg-secondary text-white p-10"
+      className="relative w-screen bg-secondary text-white p-10 rounded-t-2xl"
     >
       <section className="show flex gap-3 items-center justify-center border border-spacing-4 p-10">
         <div className="text-center">
