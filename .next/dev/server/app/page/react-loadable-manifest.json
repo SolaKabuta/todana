@@ -1,0 +1,42 @@
+{
+  "[project]/src/components/SplineScenes/LiquidScene.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/SplineScenes/LiquidScene.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_@splinetool_runtime_build_1nh3_vk._.js",
+      "static/chunks/node_modules_@splinetool_runtime_build_runtime_0r-ua2z.js",
+      "static/chunks/node_modules_01f9y8f._.js",
+      "static/chunks/src_components_SplineScenes_LiquidScene_tsx_0yq_-cm._.js",
+      "static/chunks/src_components_SplineScenes_LiquidScene_tsx_0fmtycl._.js"
+    ]
+  },
+  "[project]/src/components/SplineScenes/GlassScene.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/SplineScenes/GlassScene.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_@splinetool_runtime_build_1hv7cjs._.js",
+      "static/chunks/node_modules_@splinetool_runtime_build_runtime_0r-ua2z.js",
+      "static/chunks/node_modules_01f9y8f._.js",
+      "static/chunks/src_components_SplineScenes_GlassScene_tsx_111-zqr._.js",
+      "static/chunks/src_components_SplineScenes_GlassScene_tsx_0fmtycl._.js"
+    ]
+  },
+  "[project]/src/components/SplineScenes/TextureScene.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/SplineScenes/TextureScene.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_@splinetool_runtime_build_125v_pj._.js",
+      "static/chunks/node_modules_@splinetool_runtime_build_runtime_0r-ua2z.js",
+      "static/chunks/node_modules_01f9y8f._.js",
+      "static/chunks/src_components_SplineScenes_TextureScene_tsx_1oufpom._.js",
+      "static/chunks/src_components_SplineScenes_TextureScene_tsx_0fmtycl._.js"
+    ]
+  },
+  "[project]/src/components/SplineScenes/TitaniumScene.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/SplineScenes/TitaniumScene.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_@splinetool_runtime_build_1e66ohs._.js",
+      "static/chunks/node_modules_@splinetool_runtime_build_runtime_0r-ua2z.js",
+      "static/chunks/node_modules_01f9y8f._.js",
+      "static/chunks/src_components_SplineScenes_TitaniumScene_tsx_0mmdgxw._.js",
+      "static/chunks/src_components_SplineScenes_TitaniumScene_tsx_0fmtycl._.js"
+    ]
+  }
+}

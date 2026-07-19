@@ -1,4 +1,4 @@
-import TestimonalCard from "@/components/layout/TestimonialCad";
+import TestimonalCard from "@/components/layout/TestimonialCard";
 import Image from "next/image";
 
 export default function Testimonials() {

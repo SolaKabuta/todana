@@ -48,11 +48,11 @@ export default function Hero() {
     <main ref={heroRef} className="relative z-30 bg-accent text-primary grid md:grid-cols-3 gap-20 place-content-center min-h-screen w-screen">
       <section className=" col-span-3 text-center [&_p]:py-5">
         <div className="title opacity-0 flex justify-center gap-2 md:gap-5 xl:items-center">
-          <h1 className="text-5xl md:text-7xl xl:text-9xl uppercase font-black">
+          <h1 className="text-5xl md:text-7xl xl:text-9xl uppercase font-black text-shadow-lg">
             <span className="relative -z-30">戸棚 </span> Todana
           </h1>
           <Image
-            className="md:w-15 xl:w-40"
+            className="md:w-15 xl:w-40 "
             src="/assets/logo/logo_primary.svg"
             alt="todana logo"
             width={160}
